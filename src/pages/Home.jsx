@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FiAward, FiCode, FiHeadphones, FiSmile } from 'react-icons/fi';
 import picture from '../assets/picture.jpeg';
+import { FaArrowRight } from "react-icons/fa6";
 import Button from '../components/Button';
 import './Home.css';
 
@@ -20,7 +21,7 @@ export default function Home() {
               We create modern websites, mobile applications, and customized digital solutions that help businesses grow in the digital world.
             </p>
             <div className="hero-buttons">
-              <Button variant="primary">Services</Button>
+              <Button variant="primary">Our Products <FaArrowRight /></Button>
               <Button variant="secondary">Explore Services</Button>
             </div>
           </div>

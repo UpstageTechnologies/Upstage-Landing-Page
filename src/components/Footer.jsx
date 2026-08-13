@@ -83,7 +83,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="footer-bottom">
-          <p>© {currentYear} Upstage Technologies. All Rights Reserved.</p>
+          <p>© {currentYear} Upstage India. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

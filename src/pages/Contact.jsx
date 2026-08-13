@@ -5,8 +5,8 @@ import './Contact.css';
 
 export default function Contact() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+1234567890'; // Placeholder phone number
-    const message = 'Hello Upstage Technologies, I would like to discuss a project.';
+    const phoneNumber = '+91 94424 61428'; // Placeholder phone number
+    const message = 'Hello Upstage India, I would like to discuss a project.';
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -31,7 +31,7 @@ export default function Contact() {
                 </div>
                 <div className="contact-method-content">
                   <h4>WhatsApp</h4>
-                  <p>+1 (234) 567-890</p>
+                  <p>+91 94424 61428</p>
                   <button 
                     className="contact-method-btn"
                     onClick={handleWhatsAppClick}
@@ -48,8 +48,8 @@ export default function Contact() {
                 </div>
                 <div className="contact-method-content">
                   <h4>Email</h4>
-                  <p>info@upstage.com</p>
-                  <a href="mailto:info@upstage.com" className="contact-method-link">
+                  <p>upstagetechnologies@gmail.com</p>
+                  <a href="mailto:upstagetechnologies@gmail.com" className="contact-method-link">
                     Send Email
                   </a>
                 </div>
@@ -62,7 +62,7 @@ export default function Contact() {
                 </div>
                 <div className="contact-method-content">
                   <h4>Location</h4>
-                  <p>123 Tech Street<br />Business City, BC 12345</p>
+                  <p>Melagandhi Nagar<br />Sattur - 626203 <br/> Tamil Nadu <br/> India </p>
                 </div>
               </div>
             </div>
