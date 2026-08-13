@@ -22,5 +22,23 @@ export const services = [
     title: "Custom Development",
     description: "Tailored digital solutions designed around your unique business needs.",
     icon: "FiCode"
+  },
+  {
+    id: 5,
+    title: "Modern Solutions",
+    description: "Built with the latest technologies.",
+    icon: "FiAward"
+  },
+  {
+    id: 6,
+    title: "24/7 Support",
+    description: "We are always here to support you.",
+    icon: "FiHeadphones"
+  },
+  {
+    id: 8,
+    title: "Client Satisfaction",
+    description: "Your success is our priority.",
+    icon: "FiSmile"
   }
 ];

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiMenu, FiX, FiUser } from 'react-icons/fi';
+import { FiMenu, FiX, } from 'react-icons/fi';
+import { IoMdContact } from "react-icons/io";
 import Button from './Button';
 import logo from '../assets/logo.jpeg'
 import '../index.css';
@@ -15,7 +16,6 @@ export default function Navbar() {
     { path: '/', label: 'Home' },
     { path: '/services', label: 'Services' },
     { path: '/pricing', label: 'Pricing' },
-    { path: '/contact', label: 'Contact Us' },
   ];
 
   return (
@@ -39,45 +39,39 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Login Button */}
-        <div className="navbar-right">
-          <Link to="/login">
-            <Button variant="primary">
-              <FiUser size={18} />
-              Login
-            </Button>
-          </Link>
-        </div>
-
         {/* Hamburger Menu */}
-        <button
+        <button 
           className="hamburger"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
           {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
+
+        {/* Contact Button */}
+        <div className="navbar-right">
+          <Link to="/contact">
+            <Button variant="primary">
+              <IoMdContact size={25} />
+              Contact Us
+            </Button>
+          </Link>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Navigation */}
       {isOpen && (
         <div className="mobile-menu">
           {navLinks.map(link => (
             <Link
               key={link.path}
               to={link.path}
-              className={`mobile-nav-link ${isActive(link.path) ? 'active' : ''}`}
+              className={`nav-link ${isActive(link.path) ? 'active' : ''}`}
               onClick={() => setIsOpen(false)}
             >
               {link.label}
             </Link>
           ))}
-          <Link to="/login" onClick={() => setIsOpen(false)}>
-            <Button variant="primary" className="full-width">
-              <FiUser size={18} />
-              Login
-            </Button>
-          </Link>
         </div>
       )}
     </nav>

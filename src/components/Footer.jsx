@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Logo Section */}
           <div className="footer-section">
             <h3 className="footer-logo">
-              <span>Upstage Technology</span>
+              <span>Upstage India</span>
             </h3>
             <p className="footer-desc">
               Building digital solutions.<br />
@@ -48,9 +48,6 @@ export default function Footer() {
                 <Link to="/pricing">Pricing</Link>
               </li>
               <li>
-                <Link to="/products">Products</Link>
-              </li>
-              <li>
                 <Link to="/contact">Contact Us</Link>
               </li>
             </ul>
@@ -76,10 +73,10 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Get In Touch</h4>
             <p className="contact-info">
-              Email: <a href="mailto:info@upstage.com">info@upstage.com</a>
+              Email: <a href="mailto:upstagetechnologies@gmail.com">upstagetechnologies@gmail.com</a>
             </p>
             <p className="contact-info">
-              Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+              Phone: <a href="tel:+91 94424 61428">+91 94424 61428</a>
             </p>
           </div>
         </div>

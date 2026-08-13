@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
-import Login from './pages/Login';
+import Product from './pages/Product';
 import './App.css';
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
         <Footer />
       </div>

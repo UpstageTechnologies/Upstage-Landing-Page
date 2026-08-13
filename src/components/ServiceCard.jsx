@@ -2,7 +2,10 @@ import {
   FiGlobe, 
   FiSmartphone, 
   FiRefreshCw, 
-  FiCode 
+  FiCode, 
+  FiAward, 
+  FiHeadphones, 
+  FiSmile
 } from 'react-icons/fi';
 import '../index.css';
 
@@ -10,7 +13,10 @@ const iconMap = {
   FiGlobe: FiGlobe,
   FiSmartphone: FiSmartphone,
   FiRefreshCw: FiRefreshCw,
-  FiCode: FiCode
+  FiCode: FiCode,
+  FiAward: FiAward,
+  FiHeadphones: FiHeadphones,
+  FiSmile: FiSmile
 };
 
 export default function ServiceCard({ service }) {
