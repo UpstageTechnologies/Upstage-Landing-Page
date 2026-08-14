@@ -51,9 +51,9 @@ export default function Navbar() {
         {/* Contact Button */}
         <div className="navbar-right">
           <Link to="/contact">
-            <Button variant="primary">
+            <Button variant="fourth" className="contact-button">
               <IoMdContact size={25} />
-              Contact Us
+              <span>Contact Us</span>
             </Button>
           </Link>
         </div>

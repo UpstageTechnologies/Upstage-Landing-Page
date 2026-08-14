@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Button from './Button';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import {db} from '../firebase';
 import { FaArrowRight } from "react-icons/fa6";
 import '../index.css';
 
@@ -59,17 +61,24 @@ export default function ContactForm() {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    const newErrors = validateForm();
-    
-    if (Object.keys(newErrors).length === 0) {
-      // Form is valid - for now, just log and show success message
-      console.log('Form submitted:', formData);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const newErrors = validateForm();
+
+  if (Object.keys(newErrors).length === 0) {
+    try {
+      await addDoc(collection(db, 'contacts'), {
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        createdAt: serverTimestamp()
+      });
+
       setSubmitted(true);
-      
-      // Reset form after 3 seconds
+
       setTimeout(() => {
         setFormData({
           fullName: '',
@@ -78,11 +87,16 @@ export default function ContactForm() {
           service: 'Website Development',
           message: ''
         });
+
         setSubmitted(false);
       }, 3000);
-    } else {
-      setErrors(newErrors);
+
+    } catch (error) {
+      alert('Something went wrong. Please try again.');
     }
+    } else {
+       setErrors(newErrors);
+   }
   };
 
   if (submitted) {

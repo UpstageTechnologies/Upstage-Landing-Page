@@ -22,9 +22,7 @@ export default function Home() {
             </p>
             <div className="hero-buttons">
               <Button variant="primary">Our Products <FaArrowRight /></Button>
-              <Link to="/services">
-              <Button variant="secondary">Explore Services</Button>
-              </Link>
+              <Button variant="secondary" onClick={()=> window.open("https://www.upstagetechnologies.in")}>Explore Services</Button>
             </div>
           </div>
 

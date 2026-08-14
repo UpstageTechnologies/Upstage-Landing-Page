@@ -73,7 +73,7 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Get In Touch</h4>
             <p className="contact-info">
-              Email: <a href="mailto:upstagetechnologies@gmail.com">upstagetechnologies@gmail.com</a>
+              Email: <a href="mailto:niruban@upstageindia.com">niruban@upstageindia.com</a>
             </p>
             <p className="contact-info">
               Phone: <a href="tel:+91 94424 61428">+91 94424 61428</a>

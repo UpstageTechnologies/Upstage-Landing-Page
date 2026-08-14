@@ -199,7 +199,7 @@ ul, ol {
 .mobile-menu {
   display: none;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 1.5rem 1rem;
   background-color: var(--bg-white);
   border: 1px solid var(--border-color);
@@ -234,7 +234,7 @@ ul, ol {
   }
 
   .navbar-logo-img {
-    width: 9rem;
+    width: 11rem;
   }
 
   .nav-menu {
@@ -260,10 +260,6 @@ ul, ol {
 
   }
 
-  .navbar-right > a {
-    order: 1;
-  }
-
   .navbar-right button {
     font-size: 0.9rem;
     padding: 10px 16px;
@@ -271,6 +267,14 @@ ul, ol {
 
   .btn-forth {
     margin-right: 0;
+    border: none;
+    border: none;
+    outline: auto;
+    width:auto;
+    height: auto;
+    box-shadow: none;
+    background: transparent;
+
   }
 }
 
@@ -283,8 +287,33 @@ ul, ol {
     font-size: 1.1rem;
   }
 
+  .contact-button span {
+    display: none;
+  }
+
+  .btn-forth {
+    margin-right: 0;
+    border: none;
+    border: none;
+    outline: auto;
+    width:auto;
+    height: auto;
+    box-shadow: none;
+    background: transparent;
+
+  }
+
+  .contact-button{
+    margin: 0;
+    margin-right: 0;
+  } 
+
+  .hamburger{
+    margin: 0;
+  }
+
   .navbar-logo-img{
-    width: 5.8rem;
+    width: 9rem;
   }
 
   .logo-icon {
@@ -836,23 +865,37 @@ ul, ol {
 }
 
 .btn-primary {
-  background-color: transparent;
-  color: var(--primary-green);
-  border-color: var(--primary-green);
-  cursor: pointer;
+  background-color: var(--primary-green);
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-green);
-  color: white;
+  background-color: #117a3a;
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(21, 148, 71, 0.25);
+  box-shadow: 0 8px 16px rgba(21, 148, 71, 0.4);
 }
 
 .btn-primary:active {
   transform: translateY(0);
 }
 
+.btn-fourth {
+  background-color: transparent;
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+  cursor: pointer;
+}
+
+.btn-fourth:hover {
+  background-color: var(--primary-green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(21, 148, 71, 0.25);
+}
+
+.btn-fourth:active {
+  transform: translateY(0)
+}
 .btn-secondary {
   background-color: transparent;
   color: var(--primary-green);
@@ -909,7 +952,19 @@ ul, ol {
   transform: translateY(-2px);
 }
 
+@media screen {
+  .btn-fourth{
+    margin-right: 0;
+    border: none;
+    border: none;
+    outline: auto;
+    width:auto;
+    height: auto;
+    box-shadow: none;
+    background: transparent;
 
+  }
+}
 
 
 
