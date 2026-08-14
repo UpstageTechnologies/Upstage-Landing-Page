@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiMenu, FiX, } from 'react-icons/fi';
-import { IoMdContact } from "react-icons/io";
+import { FaPhoneVolume } from "react-icons/fa6";
 import Button from './Button';
 import logo from '../assets/company logo.jpeg'
 import '../index.css';
@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="navbar-right">
           <Link to="/contact">
             <Button variant="fourth" className="contact-button">
-              <IoMdContact size={25} />
+              <FaPhoneVolume size={25} />
               <span>Contact Us</span>
             </Button>
           </Link>
