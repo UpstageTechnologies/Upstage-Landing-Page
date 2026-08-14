@@ -116,6 +116,7 @@
   background-color: var(--primary-green);
   bottom: -50px;
   left: 50px;
+  pointer-events: none;
 }
 
 /* Highlights Section */
