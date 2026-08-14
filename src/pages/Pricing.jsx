@@ -3,6 +3,7 @@ import PricingCard from '../components/PricingCard';
 import { pricingPlans, appPricingPlans } from '../data/pricing';
 import Button from '../components/Button';
 import './Pricing.css';
+import { Link } from 'react-router-dom';
 
 export default function Pricing() {
   const [showWebPackages, setShowWebPackages] = useState(false);
@@ -56,7 +57,7 @@ export default function Pricing() {
 
         {/* Additional Info */}
         <div className="pricing-footer">
-          <p>Need a custom plan? <a href="/contact">Contact us</a> to discuss your unique requirements.</p>
+          <p>Need a custom plan? <Link to="/contact">Contact us</Link> to discuss your unique requirements.</p>
         </div>
       </div>
     </main>
