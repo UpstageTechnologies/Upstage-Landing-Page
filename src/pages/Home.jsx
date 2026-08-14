@@ -22,7 +22,9 @@ export default function Home() {
             </p>
             <div className="hero-buttons">
               <Button variant="primary">Our Products <FaArrowRight /></Button>
+              <Link to="/services">
               <Button variant="secondary">Explore Services</Button>
+              </Link>
             </div>
           </div>
 

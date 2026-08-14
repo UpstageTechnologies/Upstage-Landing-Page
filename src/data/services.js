@@ -36,7 +36,7 @@ export const services = [
     icon: "FiHeadphones"
   },
   {
-    id: 8,
+    id: 7,
     title: "Client Satisfaction",
     description: "Your success is our priority.",
     icon: "FiSmile"

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FiMenu, FiX, } from 'react-icons/fi';
 import { IoMdContact } from "react-icons/io";
 import Button from './Button';
-import logo from '../assets/logo.jpeg'
+import logo from '../assets/company logo.jpeg'
 import '../index.css';
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="navbar-container">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-        
+          <img src={logo} alt="Company Logo"  className="navbar-logo-img"/>
         </Link>
 
         {/* Desktop Navigation */}

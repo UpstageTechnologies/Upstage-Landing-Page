@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from './Button';
+import { FaArrowRight } from "react-icons/fa6";
 import '../index.css';
 
 export default function ContactForm() {
@@ -7,7 +8,7 @@ export default function ContactForm() {
     fullName: '',
     email: '',
     phone: '',
-    service: 'Website Development',
+    service: '',
     message: ''
   });
 
@@ -104,7 +105,7 @@ export default function ContactForm() {
           name="fullName"
           value={formData.fullName}
           onChange={handleChange}
-          placeholder="Your Name"
+          placeholder="Enter your name"
           className={errors.fullName ? 'error' : ''}
         />
         {errors.fullName && <span className="error-message">{errors.fullName}</span>}
@@ -118,7 +119,7 @@ export default function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="your@email.com"
+          placeholder="Enter your email"
           className={errors.email ? 'error' : ''}
         />
         {errors.email && <span className="error-message">{errors.email}</span>}
@@ -132,7 +133,7 @@ export default function ContactForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="+1 (234) 567-8900"
+          placeholder="Enter your mobile number"
           className={errors.phone ? 'error' : ''}
         />
         {errors.phone && <span className="error-message">{errors.phone}</span>}
@@ -168,7 +169,7 @@ export default function ContactForm() {
       </div>
 
       <Button variant="primary" className="submit-btn">
-        Send Message →
+        Send Message <FaArrowRight/>
       </Button>
     </form>
   );

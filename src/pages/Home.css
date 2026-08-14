@@ -67,6 +67,11 @@
   width: 100%;
 }
 
+.hero-buttons > a {
+  flex: 1;
+  width: 100%;
+}
+
 .hero-image {
   position: relative;
   display: flex;
@@ -198,6 +203,10 @@
   .hero-buttons {
     flex-wrap: wrap;
   }
+
+  .hero-buttons > a {
+  width: 100%;
+}
 
   .hero-image {
     order: -1;
