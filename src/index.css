@@ -972,7 +972,19 @@ ul, ol {
     height: auto;
     box-shadow: none;
     background: transparent;
-
+  }
+  .contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 6px;
+    width: auto;
+    height: auto;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
   }
 }
 
