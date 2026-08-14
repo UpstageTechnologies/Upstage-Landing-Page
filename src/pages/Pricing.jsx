@@ -30,10 +30,10 @@ export default function Pricing() {
 
         <div className="pricing-cards">
           <Button variant="teritary" onClick={handleWebButton}>
-            {showWebPackages ? 'Hide' : 'Web Development (India Packages)'}
+            {showWebPackages ? 'Hide' : 'Web Development (US Packages)'}
           </Button>
           <Button variant="teritary" onClick={handleAppButton}>
-            {showAppPackages ? 'Hide' : 'App Development (India / US Packages)'}
+            {showAppPackages ? 'Hide' : 'App Development (US Packages)'}
           </Button>
         </div>
 

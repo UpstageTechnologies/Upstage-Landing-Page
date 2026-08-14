@@ -2,10 +2,10 @@ export const pricingPlans = [
   {
     id: 1,
     name: "Upstage Starter",
-    price: "₹9,999",
+    price: "$120",
     description: "For very small businesses.",
     mostPopular: false,
-    deliveryTime: "3–5 working days",
+    deliveryTime: "3-5 working days",
     pages: "Home, About, Services, Contact",
     features: [
       "Responsive mobile design",
@@ -22,10 +22,10 @@ export const pricingPlans = [
   {
     id: 2,
     name: "Upstage Business",
-    price: "₹17,999",
+    price: "$220",
     description: "This should probably become your most popular package.",
     mostPopular: true,
-    deliveryTime: "7–10 working days",
+    deliveryTime: "7-10 working days",
     pages: "Up to 6 pages",
     pageList: [
       "Home",
@@ -62,10 +62,10 @@ export const pricingPlans = [
   {
     id: 3,
     name: "Upstage Premium",
-    price: "₹29,999",
+    price: "$360",
     description: "For businesses that want a more impressive website.",
     mostPopular: false,
-    deliveryTime: "10–15 working days",
+    deliveryTime: "10-15 working days",
     pages: "Up to 10 pages",
     features: [
       "Custom UI/UX",
@@ -86,7 +86,7 @@ export const pricingPlans = [
   {
     id: 4,
     name: "Dynamic Basic",
-    price: "₹39,999",
+    price: "$480 ",
     description: "Business Website + Admin Panel",
     mostPopular: false,
     deliveryTime: "Custom",
@@ -105,7 +105,7 @@ export const pricingPlans = [
   {
     id: 5,
     name: "Dynamic Business",
-    price: "₹59,999",
+    price: "$720",
     description: "Your serious business package with full content management.",
     mostPopular: false,
     deliveryTime: "Custom",
@@ -134,7 +134,7 @@ export const pricingPlans = [
   {
     id: 6,
     name: "Dynamic Premium",
-    price: "₹89,999+",
+    price: "$1,080+",
     description: "Web Application - Make your website work like an application",
     mostPopular: false,
     deliveryTime: "Custom",
@@ -161,7 +161,7 @@ export const appPricingPlans = [
   {
     id: 1,
     name: "Simple App",
-    price: "₹1.49L / $4,999",
+    price: "$4,999",
     description: "For information and simple business apps.",
     mostPopular: false,
     screens: "Up to 8 screens",
@@ -188,7 +188,7 @@ export const appPricingPlans = [
   {
     id: 2,
     name: "Business App",
-    price: "₹2.99L / $9,999",
+    price: "$9,999",
     description: "Your main selling package for serious businesses.",
     mostPopular: true,
     screens: "Up to 15 screens",
@@ -218,7 +218,7 @@ export const appPricingPlans = [
   {
     id: 3,
     name: "Professional",
-    price: "₹4.99L / $16,999",
+    price: "$16,999",
     description: "For serious businesses requiring advanced features.",
     mostPopular: false,
     screens: "20–25 screens",
@@ -240,7 +240,7 @@ export const appPricingPlans = [
   {
     id: 4,
     name: "Advanced",
-    price: "₹7.99L / $24,999",
+    price: "$24,999",
     description: "Complete software product - App + Admin Dashboard + Backend.",
     mostPopular: false,
     isAdvanced: true,
