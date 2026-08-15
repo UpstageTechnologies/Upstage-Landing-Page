@@ -39,11 +39,16 @@ export default function Pricing() {
 
         {/* Web Pricing Cards Grid */}
         {showWebPackages && (
+          <>
           <div className="pricing-grid">
             {pricingPlans.map(plan => (
               <PricingCard key={plan.id} plan={plan} />
             ))}
           </div>
+           <div className="note">
+              <p> <strong style={{fontWeight: "bold", color:"#0a0a0a"}}>Note:</strong> Quote adds $1000-$10,000+ depending on scope.</p>
+            </div>
+            </>
         )}
 
         {/* App Pricing Cards Grid */}

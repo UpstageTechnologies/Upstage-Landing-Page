@@ -1,28 +1,42 @@
 export const pricingPlans = [
   {
-    id: 1,
+     id: 1,
+    name: "Landing page",
+    price: "$199",
+    description: "For very small businesses.",
+    mostPopular: false,
+    pages: " 1 page",
+    features: [
+      "Responsive design",
+      "Mobile optimization", 
+      "Deployment"
+    ]},
+  {
+    id: 2,
     name: "Upstage Starter",
-    price: "$120",
+    price: "$599",
     description: "For very small businesses.",
     mostPopular: false,
     deliveryTime: "3-5 working days",
     pages: "Home, About, Services, Contact",
     features: [
-      "Responsive mobile design",
+      "Responsive design",
+      "Mobile optimization",
       "Modern UI",
-      "WhatsApp button",
+      "WhatsApp/Contact integration",
       "Google Maps",
       "Contact form",
       "Social media links",
       "Basic SEO",
       "SSL",
+      "Analytics",
       "Deployment"
     ]
   },
   {
-    id: 2,
+    id: 3,
     name: "Upstage Business",
-    price: "$220",
+    price: "$999",
     description: "This should probably become your most popular package.",
     mostPopular: true,
     deliveryTime: "7-10 working days",
@@ -36,12 +50,17 @@ export const pricingPlans = [
       "Contact"
     ],
     features: [
-      "Custom responsive design",
+      "Custom UI/UX",
+      "Responsive design",
+      "Lead/enquiry forms",
       "WhatsApp integration",
       "Google Maps",
-      "Contact/lead form",
+      "Gallery",
+      "Testimonials",
       "Basic SEO",
+      "Google analytics",
       "Google Search Console setup",
+      "Performance optimization",
       "Social media integration",
       "Deployment"
     ],
@@ -53,22 +72,23 @@ export const pricingPlans = [
       "Restaurants",
       "Manufacturers",
       "Traders",
+      "Local businesses",
       "Construction companies",
       "Interior designers",
       "Small businesses",
-      "Professionals"
+      "Professional services",
+      "etc.."
     ]
   },
   {
-    id: 3,
+    id: 4,
     name: "Upstage Premium",
-    price: "$360",
-    description: "For businesses that want a more impressive website.",
+    price: "$1,999",
+    description: "Everything in Business + ",
     mostPopular: false,
-    deliveryTime: "10-15 working days",
-    pages: "Up to 10 pages",
+    pages: "Up to 12 pages",
     features: [
-      "Custom UI/UX",
+      "More advanced UI/UX",
       "Animations",
       "Advanced enquiry forms",
       "Gallery",
@@ -79,6 +99,8 @@ export const pricingPlans = [
       "Google Analytics",
       "Search Console",
       "WhatsApp lead generation",
+      "Conversion-focused landing sections",
+      "Performance optimization",
       "Speed optimization",
       "Basic schema markup"
     ]
@@ -86,27 +108,34 @@ export const pricingPlans = [
   {
     id: 4,
     name: "Dynamic Basic",
-    price: "$480 ",
+    price: "$2,499 ",
     description: "Business Website + Admin Panel",
     mostPopular: false,
     deliveryTime: "Custom",
     isDynamic: true,
     adminFeatures: [
+      "Custom website",
+      "Admin panel",
+      "Database",
       "Website content management",
       "Services management",
       "Images management",
       "Testimonials management",
+      "Analytics",
+      "Dashboard",
+      "SEO",
       "Enquiries tracking",
       "Blog/news management",
-      "Contact information updates"
+      "Contact information updates",
+      "Deployment"
     ],
     technology: "React + Firebase"
   },
   {
     id: 5,
     name: "Dynamic Business",
-    price: "$720",
-    description: "Your serious business package with full content management.",
+    price: "$3,499",
+    description: "Website + Admin Panel",
     mostPopular: false,
     deliveryTime: "Custom",
     isDynamic: true,
@@ -116,13 +145,17 @@ export const pricingPlans = [
       "Authentication",
       "Database",
       "CMS",
+      "Manage pages /content",
+      "Manage images",
+      "Manage testimonials",
       "Enquiry management",
-      "Image management",
-      "Blog/news",
+      "Blog/news management",
       "Notifications/email integration",
+      "Dashboard",
       "Analytics",
       "SEO",
-      "WhatsApp integration"
+      "WhatsApp integration",
+      "Deployment"
     ],
     idealFor: [
       "Schools",
@@ -134,7 +167,7 @@ export const pricingPlans = [
   {
     id: 6,
     name: "Dynamic Premium",
-    price: "$1,080+",
+    price: "$4,999",
     description: "Web Application - Make your website work like an application",
     mostPopular: false,
     deliveryTime: "Custom",
@@ -145,12 +178,16 @@ export const pricingPlans = [
       "Customer login",
       "Employee login",
       "Online application",
+      "Appointment/Request system",
       "Payment gateway",
-      "Reports & Dashboard",
+      "Reports",
+      "Dashbase",
+      "Lead management",
       "Membership system",
       "Customer portal",
       "Inventory management",
       "CRM",
+      "Automated emails",
       "API integrations",
       "Custom features on requirement"
     ]
