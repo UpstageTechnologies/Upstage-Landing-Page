@@ -17,6 +17,15 @@ export default function Home() {
               Build Your Vision.<br />
               <span className="hero-highlight">Grow Your Business.</span>
             </h1>
+          {/*Mobile Only*/}
+          <div className="hero-image-mobile">
+            <div className="mobile-hero-image">
+              <img 
+              src={picture}
+              alt= "picture"
+              />
+            </div>
+          </div>
             <p className="hero-description">
               We create modern websites, mobile applications, and customized digital solutions that help businesses grow in the digital world.
             </p>
