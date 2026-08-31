@@ -33,7 +33,7 @@ export default function Product() {
 
           <p>
             Explore our {service.title.toLowerCase()} solutions,
-            products and projects developed to meet  your different
+            products and projects developed to meet different
             business requirements.
           </p>
 
