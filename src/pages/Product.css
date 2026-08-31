@@ -1,0 +1,169 @@
+.product-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 70px 6% 90px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.product-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-page h1 {
+  margin: 0 0 18px;
+  font-size: 35px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+.product-description {
+  max-width: 800px;
+  margin: 0 0 55px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #5f6f69;
+}
+
+.product-content {
+  padding: 40px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  border-radius: 20px;
+}
+
+.product-content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-green);
+}
+
+.product-content h2 {
+  margin: 0 0 15px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.product-content p {
+  max-width: 850px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--gray-text);
+}
+
+.service-card {
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1024px) {
+
+  .product-page {
+    padding: 60px 5% 80px;
+  }
+
+  .product-page-container {
+    max-width: 900px;
+  }
+
+  .product-page h1 {
+    font-size: 42px;
+  }
+
+  .product-description {
+    max-width: 750px;
+    font-size: 17px;
+    margin-bottom: 42px;
+  }
+
+  .product-content {
+    padding: 34px;
+  }
+
+  .product-content h2 {
+    font-size: 28px;
+  }
+
+  .product-content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .product-page {
+    padding: 50px 5% 70px;
+  }
+
+  .product-page-container {
+    max-width: 100%;
+  }
+
+  .product-page h1 {
+    font-size: 36px;
+  }
+
+  .product-description {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 35px;
+  }
+
+  .product-content {
+    padding: 28px;
+    border-radius: 16px;
+  }
+
+  .product-content h2 {
+    font-size: 25px;
+  }
+
+  .product-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .product-page {
+    padding: 40px 20px 60px;
+  }
+
+  .product-page h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .product-description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .product-content {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .product-content h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .product-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
