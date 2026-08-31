@@ -3,7 +3,9 @@ export const services = [
     id: 1,
     title: "Website Development",
     description: "Modern, responsive websites designed to represent your business and engage your customers.",
-    icon: "FiGlobe"
+    icon: "FiGlobe",
+    type: "external",
+    link: "https://www.upstagetechnologies.in/products"
   },
   {
     id: 2,
@@ -19,9 +21,10 @@ export const services = [
   },
   {
     id: 4,
-    title: "Consultancy",
+    title: "SAP Consultancy",
     description: "Architecture implementation support, system integration, migration, technical consulting to drive your success.",
-    icon: "FiTarget"
+    icon: "FiTarget",
+    link: "/consultancy"
   },
   {
     id: 5,

@@ -1,0 +1,529 @@
+.sap-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172033;
+  font-family: "Poppins", "Inter", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.sap-hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 6%;
+  background:
+    linear-gradient(
+      135deg,
+      #ecfae5 0%,
+      #ffffff 55%,
+      #d0dfc9 100%
+    );
+  text-align: center;
+}
+
+.sap-hero-content {
+  max-width: 850px;
+}
+
+.sap-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  background: #e9f7df;
+  color: var(--primary-green);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sap-hero h1 {
+  margin: 0 0 20px;
+  font-size: 35px;
+  line-height: 1.1;
+  color: var(--light-text);
+  font-weight: 700;
+}
+
+.sap-hero p {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  color: var(--gray-text);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.sap-section {
+  width: 100%;
+  padding: 75px 7%;
+  box-sizing: border-box;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+.section-heading p {
+  margin: 12px auto 0;
+  color: var(--gray-text);
+  font-size: 15px;
+}
+
+.heading-line {
+  width: 42px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: var(--primary-green);
+}
+
+.sap-primary-btn {
+  border: none;
+  outline: none;
+  padding: 14px 23px;
+  border-radius: 5px;
+  background: var(--primary-green);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s ease;
+}
+
+.sap-primary-btn span {
+  font-size: 20px;
+  line-height: 0;
+}
+
+.sap-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.help-section {
+  background: #ffffff;
+}
+
+.help-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.help-card {
+  min-height: 230px;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 1px solid #ecfae5;
+  border-radius: 5px;
+  display: flex;
+  gap: 20px;
+  transition: 0.3s ease;
+  background: #ecfae5;
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.help-icon {
+  min-width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-green);
+  font-size: 36px;
+}
+
+.help-card h3 {
+  margin: 0 0 13px;
+  font-size: 20px;
+}
+
+.help-card p {
+  margin: 0 0 25px;
+  color: var(--gray-text);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.help-card a {
+  color: var(--primary-green);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.help-card a span {
+  margin-left: 6px;
+  font-size: 17px;
+}
+
+.resource-section {
+  padding: 70px 7%;
+  background: #ecfae5;
+}
+
+.expertise-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+}
+
+.expertise-item {
+  text-align: center;
+}
+
+.expertise-icon {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-green);
+  font-size: 36px;
+}
+
+.expertise-item h3 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.expertise-item span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.abap-section {
+  background: #ffffff;
+}
+
+.abap-layout {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.abap-content p {
+  color: var(--gray-text);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.abap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.abap-card {
+  min-height: 92px;
+  padding: 12px;
+  box-sizing: border-box;
+  background: #ecfae5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  transition: 0.25s ease;
+}
+
+.abap-card:hover {
+  background: #ccecbd;
+  transform: translateY(-2px);
+}
+
+.abap-card-icon {
+  color: #5e789b;
+  font-size: 22px;
+}
+
+.abap-card span {
+  color: var(--light-text);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.engagement-section {
+  padding: 75px 7%;
+  background: var(--primary-green);
+  color: #ffffff;
+}
+
+.dark-heading h2 {
+  color: #ffffff;
+}
+
+.engagement-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.engagement-card {
+  min-height: 200px;
+  padding: 25px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.engagement-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.engagement-card h3 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.engagement-card p {
+  margin: 0;
+  color: whitesmoke;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.why-section {
+  background: #ffffff;
+}
+
+.why-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  text-align: center;
+  padding: 15px;
+}
+
+.why-icon {
+  color: var(--primary-green);
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.why-card h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.why-card p {
+  margin: 0;
+  color: #697283;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.sap-cta {
+  padding: 60px 7%;
+  background: #ecfae5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sap-cta h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.sap-cta p {
+  margin: 0;
+  color: #687080;
+}
+
+
+/* =========================================
+   RESPONSIVE - 1024px
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .help-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 35px;
+  }
+
+  .abap-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .abap-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .engagement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+  .sap-hero {
+    min-height: 430px;
+    padding: 60px 5%;
+  }
+
+  .sap-hero p {
+    font-size: 15px;
+  }
+
+  .sap-section,
+  .resource-section,
+  .engagement-section {
+    padding: 55px 5%;
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .abap-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .engagement-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sap-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+  .sap-hero {
+    min-height: 420px;
+    padding: 50px 20px;
+  }
+
+  .sap-hero h1 {
+    font-size: 34px;
+  }
+
+  .sap-hero p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .sap-section,
+  .resource-section,
+  .engagement-section {
+    padding: 45px 20px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .help-card {
+    padding: 22px;
+    flex-direction: column;
+  }
+
+  .help-icon {
+    min-width: auto;
+    justify-content: flex-start;
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 15px;
+  }
+
+  .abap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .engagement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sap-cta {
+    padding: 45px 20px;
+  }
+
+  .sap-cta h2 {
+    font-size: 24px;
+  }
+
+  .sap-primary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

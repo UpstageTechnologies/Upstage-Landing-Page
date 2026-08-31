@@ -23,14 +23,21 @@ const iconMap = {
 export default function ServiceCard({ service }) {
   const IconComponent = iconMap[service.icon] || FiGlobe;
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate(`/products/${service.id}`);
-  };
+
+  const handleClick =()=> {
+    if (service.type === "external") {
+      window.location.href = service.link;
+    }
+    else{
+      navigate(service.link);
+    }
+  }
   return (
     <div className="service-card"
       onClick={handleClick}
-      role="button"
-      tabIndex={0}>
+      style={{cursor: "pointer"}}
+    
+    >
       <div className="service-icon">
         <IconComponent size={40} />
       </div>
