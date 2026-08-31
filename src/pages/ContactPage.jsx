@@ -52,7 +52,7 @@ export default function ContactPage() {
                 <div className="contact-method-content">
                   <h4>Email</h4>
                   <p>upstageindia@gmail.com</p>
-                  <a href="mailto:upstagetechnologies@gmail.com" className="contact-method-link">
+                  <a href="mailto:upstageindia@gmail.com" className="contact-method-link">
                     Send Email
                   </a>
                 </div>
