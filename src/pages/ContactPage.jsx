@@ -3,9 +3,9 @@ import { SiWhatsapp } from 'react-icons/si';
 import ContactForm from '../components/ContactForm';
 import './Contact.css';
 
-export default function Contact() {
+export default function ContactPage() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+91 94424 61428'; // Placeholder phone number
+    const phoneNumber = '+46 73 902 21 25';
     const message = 'Hello Upstage India, I would like to discuss a project.';
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -31,7 +31,10 @@ export default function Contact() {
                 </div>
                 <div className="contact-method-content">
                   <h4>WhatsApp</h4>
-                  <p>+91 94424 61428</p>
+                  <p>Sweden Branch Office<br/>
+                      +46 73 902 21 25<br/><br/>
+                     Canada Branch Office<br/>
+                      +1 (905) 226-5800</p>
                   <button 
                     className="contact-method-btn"
                     onClick={handleWhatsAppClick}
@@ -49,7 +52,7 @@ export default function Contact() {
                 <div className="contact-method-content">
                   <h4>Email</h4>
                   <p>upstageindia@gmail.com</p>
-                  <a href="mailto:upstageindia@gmail.com" className="contact-method-link">
+                  <a href="mailto:upstagetechnologies@gmail.com" className="contact-method-link">
                     Send Email
                   </a>
                 </div>
@@ -62,16 +65,19 @@ export default function Contact() {
                 </div>
                 <div className="contact-method-content">
                   <h4>Location</h4>
-                  <p>Melagandhi Nagar<br />Sattur - 626203 <br/> Tamil Nadu <br/> India </p>
+                  <p>
+                    India Branch Office (Head Office)<br/>
+                    Melagandhi Nagar<br/>
+                    Sattur - 626203<br/>
+                    Tamil Nadu<br/>
+                    India<br/><br/>
+                    Sweden Branch Office<br/>
+                    Gothenburg<br/><br/>
+                    Canada Branch Office<br/>
+                    Toronto </p>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Right Section - Form */}
-          <div className="contact-form-section">
-            <h2>Send us a Message</h2>
-            <ContactForm />
           </div>
         </div>
       </div>

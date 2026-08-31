@@ -19,6 +19,7 @@ import {
 
 import "./Consultancy.css";
 import {useNavigate} from "react-router-dom";
+import { useState } from "react";
 
 const resourceExpertise = [
   {
@@ -132,6 +133,7 @@ const whyChooseUs = [
 ];
 
 export default function Consultancy() {
+  const [showAbapServices,setShowAbapServices] = useState(false);
   const navigate = useNavigate();
   return (
     <div className="sap-page">
@@ -149,7 +151,9 @@ export default function Consultancy() {
             around your business needs.
           </p>
 
-          <button className="sap-primary-btn">
+          <button className="sap-primary-btn"
+            onClick={()=>navigate("/contactpage")}
+          >
             Talk to Our SAP Experts
             <span>→</span>
           </button>
@@ -261,49 +265,53 @@ export default function Consultancy() {
       </section>
 
       <section
-        className="sap-section abap-section"
-        id="abap"
+        className={`sap-section abap-section ${
+        showAbapServices ? "abap-active" : ""
+      }`}
+      id="abap"
       >
+      <div className="section-heading">
+        <h2>ABAP Development Services</h2>
+      <div className="heading-line"></div>
+      </div>
 
-        <div className="section-heading">
-          <h2>ABAP Development Services</h2>
-          <div className="heading-line"></div>
-        </div>
+      <div className="abap-layout">
+      <div className="abap-content">
 
-        <div className="abap-layout">
+        <p>
+          End-to-end ABAP development capabilities to build,
+          extend and modernize your SAP environment.
+        </p>
 
-          <div className="abap-content">
+      <button
+        className="explore-btn"
+        onClick={() => setShowAbapServices(!showAbapServices)}
+      >
+        <span>
+        {showAbapServices? "HIDE": "Explore ABAP Services"}
+        </span>
+      </button>
 
-            <p>
-              End-to-end ABAP development capabilities to build,
-              extend and modernize your SAP environment.
-            </p>
+    </div>
 
-            <button className="sap-primary-btn">
-              Explore ABAP Services
-              <span>→</span>
-            </button>
+    {/* ABAP SERVICES */}
+    <div className="abap-grid">
 
+      {abapServices.map((service, index) => (
+        <div className="abap-card" key={index}>
+
+          <div className="abap-card-icon">
+            <FiFileText />
           </div>
 
-
-          <div className="abap-grid">
-
-            {abapServices.map((service, index) => (
-              <div className="abap-card" key={index}>
-
-                <div className="abap-card-icon">
-                  <FiFileText />
-                </div>
-
-                <span>{service}</span>
-
-              </div>
-            ))}
-
-          </div>
+          <span>{service}</span>
 
         </div>
+      ))}
+
+       </div>
+
+      </div>
       </section>
 
       <section

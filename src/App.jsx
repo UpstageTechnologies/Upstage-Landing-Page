@@ -9,6 +9,7 @@ import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import './App.css';
 import Consultancy from './pages/Consultancy';
+import ContactPage from './pages/ContactPage';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/consultancy" element={<Consultancy />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/contactpage" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>
