@@ -48,8 +48,8 @@ export default function Contact() {
                 </div>
                 <div className="contact-method-content">
                   <h4>Email</h4>
-                  <p>upstageindia@gmail.com</p>
-                  <a href="mailto:upstageindia@gmail.com" className="contact-method-link">
+                  <p>niruban@upstageindia.com</p>
+                  <a href="mailto:niruban@upstageindia.com" className="contact-method-link">
                     Send Email
                   </a>
                 </div>

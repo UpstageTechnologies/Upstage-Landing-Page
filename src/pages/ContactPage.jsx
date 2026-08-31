@@ -9,7 +9,13 @@ export default function ContactPage() {
     const message = 'Hello Upstage India, I would like to discuss a project.';
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-  };
+   };
+   const handleClick = () => {
+    const phoneNumber = '+1 (905) 226-5800';
+    const message = 'Hello Upstage India, I would like to discuss a project.';
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+   };
 
   return (
     <main className="contact">
@@ -32,12 +38,19 @@ export default function ContactPage() {
                 <div className="contact-method-content">
                   <h4>WhatsApp</h4>
                   <p>Sweden Branch Office<br/>
-                      +46 73 902 21 25<br/><br/>
-                     Canada Branch Office<br/>
-                      +1 (905) 226-5800</p>
+                      +46 73 902 21 25</p>
                   <button 
                     className="contact-method-btn"
                     onClick={handleWhatsAppClick}
+                  >
+                    Message on WhatsApp
+                  </button>
+                 <br/><br/>
+                  <p>Canada Branch Office<br/>
+                      +1 (905) 226-5800</p>
+                  <button 
+                    className="contact-method-btn"
+                    onClick={handleClick}
                   >
                     Message on WhatsApp
                   </button>
@@ -51,8 +64,8 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-method-content">
                   <h4>Email</h4>
-                  <p>upstageindia@gmail.com</p>
-                  <a href="mailto:upstageindia@gmail.com" className="contact-method-link">
+                  <p>niruban@upstageindia.com</p>
+                  <a href="mailto:niruban@upstageindia.com" className="contact-method-link">
                     Send Email
                   </a>
                 </div>
