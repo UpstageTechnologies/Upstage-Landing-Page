@@ -284,10 +284,17 @@
     padding: 22px;
   }
 
+  .product-info h3 {
+    color: var(--light-text);
+  }
+
   .product-highlights {
     grid-template-columns: 1fr;
-
     gap: 14px;
+  }
+
+  .product-highlight h4 {
+    color: var(--light-text);
   }
 
   .product-highlight {
@@ -307,19 +314,16 @@
 
   .products-label {
     font-size: 11px;
-
     letter-spacing: 1.5px;
   }
 
   .products-header h1 {
     font-size: 30px;
-
     line-height: 1.2;
   }
 
   .products-header p {
     font-size: 15px;
-
     line-height: 1.65;
   }
 

@@ -13,10 +13,10 @@
 
 .product-page h1 {
   margin: 0 0 18px;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 1.15;
   font-weight: 700;
-  color: var(--dark-text);
+  color: var(--primary-green);
 }
 
 .product-description {
@@ -44,7 +44,7 @@
   margin: 0 0 15px;
   font-size: 30px;
   font-weight: 700;
-  color: var(--primary-green);
+  color: var(--dark-text);
 }
 
 .product-content p {
