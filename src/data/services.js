@@ -11,7 +11,8 @@ export const services = [
     id: 2,
     title: "Mobile App Development",
     description: "Powerful and user-friendly mobile applications built for today's digital world.",
-    icon: "FiSmartphone"
+    icon: "FiSmartphone",
+    link: "/pospage"
   },
   {
     id: 3,

@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import './App.css';
 import Consultancy from './pages/Consultancy';
 import ContactPage from './pages/ContactPage';
+import POSPage from './pages/POSPage';
+import InventoryPage from './pages/InventoryPage';
 
 export default function App() {
   return (
@@ -23,6 +25,8 @@ export default function App() {
           <Route path="/products" element={<ProductPage />} />
           <Route path="/consultancy" element={<Consultancy />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/pospage" element={<POSPage />} />
+          <Route path="/inventorypage" element={<InventoryPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contactpage" element={<ContactPage />} />
         </Routes>
