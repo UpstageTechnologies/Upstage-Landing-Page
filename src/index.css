@@ -107,6 +107,7 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 0;
   gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -139,7 +140,7 @@ ul, ol {
   display: flex;
   gap: 2rem;
   flex: 1;
-  margin-left: 50%;
+  margin-left: 40%;
 }
 
 .nav-link {
@@ -224,6 +225,25 @@ ul, ol {
 
 .mobile-menu .nav-link:hover {
   background-color: var(--bg-light);
+}
+
+@media (max-width: 1024px) {
+  .navbar{
+    width:100%;
+    height:auto;
+    position: sticky;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  .navbar-container{
+    width:100%;
+    margin-left: 0px;
+  }
+
+  .nav-menu {
+    margin-left: 100px;
+  }
 }
 
 /* Responsive Design */

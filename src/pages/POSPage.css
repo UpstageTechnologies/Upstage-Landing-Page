@@ -466,6 +466,12 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .benefit-card:nth-child(3) {
+    grid-column: 1/-1;
+    justify-self: center;
+    width: 50%;
+  }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -507,6 +513,10 @@
 
   .benefit-card {
     padding: 28px 20px;
+  }
+
+  .benefit-card:nth-child(3) {
+    width: 100%;
   }
 
   .inventory-intro-section {

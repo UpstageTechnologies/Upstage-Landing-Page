@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { services } from "../data/services";
 import "./ProductPage.css";
 
 export default function ProductPage() {
+  const navigate = useNavigate();
+
   return (
     <main className="products-page">
       <div className="products-container">
@@ -26,6 +29,14 @@ export default function ProductPage() {
             <section
               className="product-section"
               key={service.id}
+              onClick={() => 
+              {
+                if (service.type === "external") {
+                  window.location.href = service.link;
+                } else {
+                  navigate(service.link);
+                }
+              }}
             >
 
               {/* NUMBER */}
