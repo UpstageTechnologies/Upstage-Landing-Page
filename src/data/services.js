@@ -4,15 +4,18 @@ export const services = [
     title: "Website Development",
     description: "Modern, responsive websites designed to represent your business and engage your customers.",
     icon: "FiGlobe",
-    type: "external",
-    link: "https://www.upstagetechnologies.in/products"
+    type: "package",
+    packageType: "web-development",
+    link: "/pricing"
   },
   {
     id: 2,
     title: "Mobile App Development",
     description: "Powerful and user-friendly mobile applications built for today's digital world.",
     icon: "FiSmartphone",
-    link: "/pospage"
+    type: "package",
+    packageType: "app-development",
+    link: "/pricing"
   },
   {
     id: 3,

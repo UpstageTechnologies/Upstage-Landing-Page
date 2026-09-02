@@ -1,115 +1,213 @@
 import { useNavigate } from "react-router-dom";
-import { services } from "../data/services";
 import "./ProductPage.css";
 
 export default function ProductPage() {
   const navigate = useNavigate();
 
+  const webProducts = [
+    {
+      id: 1,
+      name: "Kadai Website",
+      description:
+        "A modern and responsive website designed to showcase your business and engage your customers.",
+      image: "picture",
+      link: "https://www.kadai.website/",
+    },
+    {
+      id: 2,
+      name: "Hospital System",
+      description:
+        "A comprehensive hospital management system designed to streamline operations and improve patient care.",
+      image: "picture",
+      link: "https://hospital-delta-pink.vercel.app/",
+    },
+    {
+      id: 3,
+      name: "School System",
+      description:
+        "A comprehensive school management system designed to streamline operations and improve education outcomes.",
+      image: "picture",
+      link: "https://www.upstagetechnologies.in/intro",
+    },
+  ];
+
+  const appProducts = [
+    {
+      id: 1,
+      name: "Kadai App",
+      description:
+        "A smart mobile application designed to simplify business and store management.",
+      image: "picture",
+      link: "/mobile-app-development/kadai",
+    },
+    {
+      id: 2,
+      name: "POS App",
+      description:
+        "A powerful mobile POS solution designed to make business operations easier.",
+      image: "picture",
+      link: "/pospage",
+    },
+    {
+      id: 3,
+      name: "Upstage school management",
+      description:
+        "Simplify school operations with smater digital management.",
+      image: "picture",
+      link: "/mobile-app-development/business",
+    },
+    {
+      id: 4,
+      name: "Upstage Attendance and Inventory",
+      description:
+        "Track attendance, stock & daily business operations.",
+      image: "picture",
+      link: "/mobile-app-development/customer",
+    },
+  ];
+
   return (
     <main className="products-page">
       <div className="products-container">
 
-        {/* HEADER */}
+        {/* PAGE HEADER */}
         <div className="products-header">
           <span className="products-label">OUR PRODUCTS</span>
 
           <h1>Our Products & Solutions</h1>
 
           <p>
-            Explore our complete range of digital solutions and
-            services developed to meet different business needs.
+            Explore our digital products and solutions designed
+            to meet modern business needs.
           </p>
         </div>
 
+        {/* =========================
+            WEB DEVELOPMENT
+        ========================== */}
 
-        {/* ALL SERVICES DETAILS */}
-        <div className="products-list">
+        <section className="product-category-card">
 
-          {services.map((service, index) => (
-            <section
-              className="product-section"
-              key={service.id}
-              onClick={() => 
-              {
-                if (service.type === "external") {
-                  window.location.href = service.link;
-                } else {
-                  navigate(service.link);
-                }
-              }}
-            >
+          <div className="category-header">
 
-              {/* NUMBER */}
-              <div className="product-number">
-                {String(index + 1).padStart(2, "0")}
-              </div>
+            <div className="category-number">
+              01
+            </div>
 
+            <div className="category-content">
+              <h2>Web Development</h2>
 
-              {/* DETAILS */}
-              <div className="product-details">
+              <p>
+                Modern, responsive websites designed to represent
+                your business and engage your customers.
+              </p>
+            </div>
 
-                <h2>{service.title}</h2>
+          </div>
 
-                <p className="product-description">
-                  {service.description}
-                </p>
+          <div className="products-scroll">
 
+            {webProducts.map((product) => (
+              <article
+                className="product-card"
+                key={product.id}
+                style={{
+                  backgroundImage: `url(${product.image})`,
+                }}
+              >
 
-                {/* ABOUT */}
-                <div className="product-info">
-                  <h3>
-                    About {service.title}
-                  </h3>
+                {/* DARK OVERLAY */}
+                <div className="product-card-overlay"></div>
 
-                  <p>
-                    Our {service.title.toLowerCase()} solutions are
-                    designed to help businesses build, improve and
-                    manage their digital presence with modern,
-                    reliable and scalable technology.
-                  </p>
-                </div>
+                {/* CONTENT ON IMAGE */}
+                <div className="product-card-content">
 
+                  <h3>{product.name}</h3>
 
-                {/* HIGHLIGHTS */}
-                <div className="product-highlights">
+                  <p>{product.description}</p>
 
-                  <div className="product-highlight">
-                    <h4>Professional Solutions</h4>
-
-                    <p>
-                      Digital solutions designed according to
-                      your business requirements.
-                    </p>
-                  </div>
-
-
-                  <div className="product-highlight">
-                    <h4>Modern Technology</h4>
-
-                    <p>
-                      Built using modern technologies and
-                      development practices.
-                    </p>
-                  </div>
-
-
-                  <div className="product-highlight">
-                    <h4>Business Focused</h4>
-
-                    <p>
-                      Solutions focused on performance,
-                      usability and customer satisfaction.
-                    </p>
-                  </div>
+                  <button
+                    className="view-product-btn"
+                    onClick={() => {
+                      window.location.href = product.link;
+                    }}
+                  >
+                    View Product
+                    <span>→</span>
+                  </button>
 
                 </div>
 
-              </div>
+              </article>
+            ))}
 
-            </section>
-          ))}
+          </div>
 
-        </div>
+        </section>
+
+
+        {/* =========================
+            MOBILE APP DEVELOPMENT
+        ========================== */}
+
+        <section className="product-category-card">
+
+          <div className="category-header">
+
+            <div className="category-number">
+              02
+            </div>
+
+            <div className="category-content">
+              <h2>Mobile App Development</h2>
+
+              <p>
+                Powerful and user-friendly mobile applications
+                built for modern business requirements.
+              </p>
+            </div>
+
+          </div>
+
+          <div className="products-scroll">
+
+            {appProducts.map((product) => (
+              <article
+                className="product-card"
+                key={product.id}
+                style={{
+                  backgroundImage: `url(${product.image})`,
+                }}
+              >
+
+                {/* DARK OVERLAY */}
+                <div className="product-card-overlay"></div>
+
+                {/* CONTENT ON IMAGE */}
+                <div className="product-card-content">
+
+                  <h3>{product.name}</h3>
+
+                  <p>{product.description}</p>
+
+                  <button
+                    className="view-product-btn"
+                    onClick={() => {
+                      window.location.href = product.link;
+                    }}
+                  >
+                    View Product
+                    <span>→</span>
+                  </button>
+
+                </div>
+
+              </article>
+            ))}
+
+          </div>
+
+        </section>
 
       </div>
     </main>

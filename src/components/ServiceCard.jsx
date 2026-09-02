@@ -25,8 +25,12 @@ export default function ServiceCard({ service }) {
   const navigate = useNavigate();
 
   const handleClick =()=> {
-    if (service.type === "external") {
-      window.location.href = service.link;
+    if (service.type === "package") {
+      navigate(service.link, {
+        state: {
+          openSection: service.packageType
+        }
+      })
     }
     else{
       navigate(service.link);

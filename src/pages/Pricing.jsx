@@ -3,12 +3,19 @@ import PricingCard from '../components/PricingCard';
 import { pricingPlans, appPricingPlans } from '../data/pricing';
 import Button from '../components/Button';
 import './Pricing.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Pricing() {
-  const [showWebPackages, setShowWebPackages] = useState(false);
-  const [showAppPackages, setShowAppPackages] = useState(false);
+  const location = useLocation();
 
+  const [showWebPackages, setShowWebPackages] = useState(
+      location.state?.openSection === "web-development"
+  );
+
+  const [showAppPackages, setShowAppPackages] = useState(
+      location.state?.openSection === "app-development"
+  );
+  
   const handleWebButton = () => {
     setShowWebPackages(!showWebPackages);
     setShowAppPackages(false);
