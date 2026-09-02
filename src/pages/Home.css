@@ -179,7 +179,7 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     padding: 0 1.5rem;
   }
@@ -189,7 +189,7 @@
   }
 
   .hero-image-placeholder {
-    max-width: 350px;
+    width: 350px;
   }
 }
 

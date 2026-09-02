@@ -140,7 +140,7 @@ ul, ol {
   display: flex;
   gap: 2rem;
   flex: 1;
-  margin-left: 40%;
+  margin-left: 100px;
 }
 
 .nav-link {
@@ -242,7 +242,7 @@ ul, ol {
   }
 
   .nav-menu {
-    margin-left: 100px;
+    margin-left: 10px;
   }
 }
 
