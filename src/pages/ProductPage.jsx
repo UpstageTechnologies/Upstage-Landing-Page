@@ -18,7 +18,7 @@ export default function ProductPage() {
       name: "Hospital System",
       description:
         "A comprehensive hospital management system designed to streamline operations and improve patient care.",
-      image: hospital,
+      image: "hospital",
       link: "https://hospital-delta-pink.vercel.app/",
     },
     {
