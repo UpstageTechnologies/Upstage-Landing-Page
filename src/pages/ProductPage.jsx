@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import "./ProductPage.css";
+import hospital from "../assets/hospital.jpeg";
 
 export default function ProductPage() {
   const navigate = useNavigate();
-
   const webProducts = [
     {
       id: 1,
@@ -18,7 +18,7 @@ export default function ProductPage() {
       name: "Hospital System",
       description:
         "A comprehensive hospital management system designed to streamline operations and improve patient care.",
-      image: "picture",
+      image: hospital,
       link: "https://hospital-delta-pink.vercel.app/",
     },
     {
@@ -54,7 +54,7 @@ export default function ProductPage() {
       description:
         "Simplify school operations with smater digital management.",
       image: "picture",
-      link: "/mobile-app-development/business",
+      link: "/school-management",
     },
     {
       id: 4,
@@ -81,10 +81,6 @@ export default function ProductPage() {
             to meet modern business needs.
           </p>
         </div>
-
-        {/* =========================
-            WEB DEVELOPMENT
-        ========================== */}
 
         <section className="product-category-card">
 
@@ -116,10 +112,7 @@ export default function ProductPage() {
                 }}
               >
 
-                {/* DARK OVERLAY */}
                 <div className="product-card-overlay"></div>
-
-                {/* CONTENT ON IMAGE */}
                 <div className="product-card-content">
 
                   <h3>{product.name}</h3>
@@ -144,11 +137,6 @@ export default function ProductPage() {
           </div>
 
         </section>
-
-
-        {/* =========================
-            MOBILE APP DEVELOPMENT
-        ========================== */}
 
         <section className="product-category-card">
 

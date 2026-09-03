@@ -12,6 +12,9 @@ import Consultancy from './pages/Consultancy';
 import ContactPage from './pages/ContactPage';
 import POSPage from './pages/POSPage';
 import InventoryPage from './pages/InventoryPage';
+import SchoolManagementPage from './pages/SchoolManagementPage';
+import SchoolManagementFeatures from './pages/SchoolManagementFeatures';
+import SchoolFeaturesDetails from './pages/SchoolFeaturesDetails';
 
 export default function App() {
   return (
@@ -28,6 +31,9 @@ export default function App() {
           <Route path="/pospage" element={<POSPage />} />
           <Route path="/inventorypage" element={<InventoryPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/school-management/features/:featureId" element={<SchoolFeaturesDetails />} />
+          <Route path="/school-management/features" element={<SchoolManagementFeatures />} />
+          <Route path="/school-management" element={<SchoolManagementPage />} />
           <Route path="/contactpage" element={<ContactPage />} />
         </Routes>
         <Footer />
