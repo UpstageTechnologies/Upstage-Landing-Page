@@ -281,6 +281,21 @@
 
     font-size: 15px;
   }
+  .kadai-hero-actions {
+    margin-top: 28px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .kadai-primary-btn,
+  .kadai-secondary-btn {
+    padding: 13px 18px;
+
+    font-size: 14px;
+  }
+
+
 }
 
 @media (max-width: 480px) {
