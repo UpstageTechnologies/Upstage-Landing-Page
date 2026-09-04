@@ -32,11 +32,8 @@
 .kadai-background-media {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
-
   animation: kadaiMediaFade 0.7s ease;
 }
 
@@ -291,7 +288,7 @@
   .kadai-primary-btn,
   .kadai-secondary-btn {
     padding: 13px 18px;
-
+    width: 100%;
     font-size: 14px;
   }
 

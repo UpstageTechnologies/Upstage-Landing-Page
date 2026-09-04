@@ -288,36 +288,8 @@
     font-size: 15px;
   }
 
-  .school-hero-actions {
-    margin-top: 28px;
-
-    flex-wrap: wrap;
-  }
-
-
-  .school-primary-btn,
-  .school-secondary-btn {
-    padding: 13px 18px;
-
-    font-size: 14px;
-  }
-  .school-hero-actions {
-    margin-top: 28px;
-
-    flex-wrap: wrap;
-  }
-
-
-  .school-primary-btn,
-  .school-secondary-btn {
-    padding: 13px 18px;
-
-    font-size: 14px;
-  }
-
    .attendance-hero-actions {
     margin-top: 28px;
-
     flex-wrap: wrap;
   }
 
@@ -325,7 +297,7 @@
   .attendance-primary-btn,
   .primary-btn {
     padding: 13px 18px;
-
+    width: 100%;
     font-size: 14px;
   }
 
