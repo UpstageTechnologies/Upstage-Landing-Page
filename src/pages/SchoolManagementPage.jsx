@@ -6,7 +6,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import school1 from "../assets/school1.png";
 import school2 from "../assets/school2.jpeg";
-import schoolVideo from "../assets/video.mp4";
+import video2 from "../assets/video2.mp4";
 import "./SchoolManagementPage.css";
 
 const slides = [
@@ -24,7 +24,7 @@ const slides = [
   },
   {
     type: "video",
-    src: schoolVideo,
+    src: video2,
   },
 ];
 

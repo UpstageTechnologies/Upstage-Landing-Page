@@ -1,27 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AttendanceInventoryApp.css";
-import image from "../assets/image1.png";
+import images from "../assets/images.jpeg";
 import image2 from "../assets/image2.png";
-import video from "../assets/video.mp4";
+import video3 from "../assets/video3.mp4";
 
 
 const slides = [
   {
     type: "image",
-    src: image,
+    src: image2,
     alt: "Attendance Management",
     duration: 5000,
   },
   {
     type: "image",
-    src: image2,
+    src: images,
     alt: "Inventory Management",
     duration: 5000,
   },
   {
     type: "video",
-    src: video,
+    src: video3,
   },
 ];
 
