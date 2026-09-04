@@ -1,9 +1,76 @@
-import { FiArrowRight, FiCheckCircle, FiGrid } from "react-icons/fi";
+import { useEffect, useRef, useState } from "react";
+import {
+  FiArrowRight,
+  FiCheckCircle,
+} from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import school1 from "../assets/school1.png";
+import school2 from "../assets/school2.jpeg";
+import schoolVideo from "../assets/video.mp4";
 import "./SchoolManagementPage.css";
+
+const slides = [
+  {
+    type: "image",
+    src: school1,
+    alt: "School Management",
+    duration: 5000,
+  },
+  {
+    type: "image",
+    src: school2,
+    alt: "School Administration",
+    duration: 5000,
+  },
+  {
+    type: "video",
+    src: schoolVideo,
+  },
+];
 
 export default function SchoolManagementPage() {
   const navigate = useNavigate();
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const videoRef = useRef(null);
+
+  const current = slides[currentSlide];
+
+  useEffect(() => {
+    if (current.type !== "image") return;
+
+    const timer = setTimeout(() => {
+      setCurrentSlide(
+        (prev) => (prev + 1) % slides.length
+      );
+    }, current.duration);
+
+    return () => clearTimeout(timer);
+  }, [currentSlide, current.type, current.duration]);
+
+  useEffect(() => {
+    if (
+      current.type === "video" &&
+      videoRef.current
+    ) {
+      const video = videoRef.current;
+
+      video.currentTime = 0;
+      video.muted = true;
+
+      video.play().catch((error) => {
+        console.log(
+          "Video autoplay failed:",
+          error
+        );
+      });
+    }
+  }, [currentSlide, current.type]);
+
+  const handleVideoEnd = () => {
+    setCurrentSlide(0);
+  };
 
   const handleExplore = () => {
     navigate("/school-management/features");
@@ -12,13 +79,43 @@ export default function SchoolManagementPage() {
   return (
     <main className="school-management-page">
       <section className="school-hero">
+        <div className="school-background">
+
+          {current.type === "image" ? (
+            <img
+              key={current.src}
+              src={current.src}
+              alt={current.alt}
+              className="school-background-media"
+            />
+          ) : (
+            <video
+              ref={videoRef}
+              key={current.src}
+              src={current.src}
+              className="school-background-media"
+              muted
+              autoPlay
+              playsInline
+              onEnded={handleVideoEnd}
+            />
+          )}
+
+        </div>
+
+        <div className="school-background-overlay"></div>
+
         <div className="school-hero-container">
 
           <div className="school-hero-content">
 
+            {/* Eyebrow */}
+
             <span className="school-eyebrow">
               SCHOOL MANAGEMENT SYSTEM
             </span>
+
+            {/* Heading */}
 
             <h1>
               Smarter School
@@ -26,11 +123,16 @@ export default function SchoolManagementPage() {
               <span>Management.</span>
             </h1>
 
+            {/* Description */}
+
             <p>
-              A complete school management solution designed to simplify
-              administration, academics, attendance, accounts and
+              A complete school management solution
+              designed to simplify administration,
+              academics, attendance, accounts and
               communication from one powerful platform.
             </p>
+
+            {/* Buttons */}
 
             <div className="school-hero-actions">
 
@@ -42,11 +144,15 @@ export default function SchoolManagementPage() {
                 <FiArrowRight />
               </button>
 
-              <button className="school-secondary-btn">
-                Get Started
+              <button
+                className="school-secondary-btn"
+              >
+                Download From Playstore
               </button>
 
             </div>
+
+            {/* Points */}
 
             <div className="school-hero-points">
 
@@ -69,94 +175,25 @@ export default function SchoolManagementPage() {
 
           </div>
 
-          <div className="school-hero-visual">
+        </div>
 
-            <div className="school-dashboard-window">
+        <div className="school-slide-indicators">
 
-              <div className="school-window-header">
-
-                <div className="school-window-dots">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-
-                <span className="window-title">
-                  School Dashboard
-                </span>
-
-                <FiGrid />
-
-              </div>
-
-              <div className="school-dashboard-body">
-
-                <div className="school-dashboard-welcome">
-
-                  <div>
-                    <small>Welcome back</small>
-                    <h3>School Overview</h3>
-                  </div>
-
-                  <div className="school-dashboard-date">
-                    Today
-                  </div>
-
-                </div>
-
-
-                {/* Stats */}
-                <div className="school-stat-grid">
-
-                  <div className="school-stat-card">
-                    <span>Students</span>
-                    <strong>1,250</strong>
-                    <small>Active students</small>
-                  </div>
-
-                  <div className="school-stat-card">
-                    <span>Teachers</span>
-                    <strong>120</strong>
-                    <small>Teaching staff</small>
-                  </div>
-
-                  <div className="school-stat-card">
-                    <span>Attendance</span>
-                    <strong>96%</strong>
-                    <small>Today's attendance</small>
-                  </div>
-
-                </div>
-
-
-                {/* Chart */}
-                <div className="school-chart-card">
-
-                  <div className="school-chart-header">
-                    <span>Attendance Overview</span>
-                    <small>This Week</small>
-                  </div>
-
-                  <div className="school-chart">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              className={
+                currentSlide === index
+                  ? "active"
+                  : ""
+              }
+            />
+          ))}
 
         </div>
+
       </section>
+
     </main>
   );
 }

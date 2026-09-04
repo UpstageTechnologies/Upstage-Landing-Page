@@ -1,0 +1,530 @@
+.kadai-features-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172033;
+  overflow-x: hidden;
+}
+
+.kadai-features-container {
+  width: min(1200px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.kadai-features-hero {
+  padding: 45px 0 90px;
+  background: linear-gradient(
+    135deg,
+    #f0fdf4 0%,
+    #ecfdf5 100%
+  );
+}
+
+.kadai-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #475467;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.kadai-back-btn:hover {
+  color: #059669;
+}
+
+.kadai-back-btn svg {
+  font-size: 16px;
+}
+
+.kadai-features-hero-content {
+  max-width: 800px;
+  margin-top: 75px;
+}
+
+.kadai-features-eyebrow {
+  display: inline-flex;
+
+  padding: 8px 15px;
+
+  margin-bottom: 22px;
+
+  border-radius: 50px;
+
+  background: #d1fae5;
+
+  color: #059669;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.kadai-features-hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  font-weight: 700;
+}
+
+.kadai-features-hero-content h1 span {
+  display: block;
+  color: #059669;
+}
+
+.kadai-features-hero-content p {
+  max-width: 690px;
+
+  margin: 28px 0 0;
+
+  color: #667085;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.kadai-features-section {
+  padding: 100px 0;
+}
+
+.kadai-features-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 55px;
+}
+
+.kadai-features-heading span {
+  color: #059669;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.kadai-features-heading h2 {
+  margin: 10px 0 0;
+
+  font-size: 42px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+}
+
+.kadai-features-heading p {
+  max-width: 420px;
+
+  margin-top: 20px;
+
+  color: #667085;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.kadai-features-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.kadai-feature-card {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 28px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kadai-feature-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #a7f3d0;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.kadai-feature-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.kadai-feature-number {
+  color: #98a2b3;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.kadai-feature-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #ecfdf5;
+
+  color: #059669;
+
+  font-size: 23px;
+
+  transition: 0.3s ease;
+}
+
+.kadai-feature-card:hover .kadai-feature-icon {
+  background: #059669;
+  color: #ffffff;
+}
+
+.kadai-feature-card-content {
+  margin-top: 45px;
+}
+
+.kadai-feature-card h3 {
+  margin: 0;
+
+  font-size: 22px;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.4px;
+}
+
+.kadai-feature-card p {
+  margin: 14px 0 22px;
+
+  color: #667085;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+.kadai-feature-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #059669;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.kadai-feature-link svg {
+  transition: transform 0.25s ease;
+}
+
+.kadai-feature-card:hover
+.kadai-feature-link svg {
+  transform: translateX(4px);
+}
+
+.kadai-features-cta {
+  padding: 100px 0;
+
+  background: #172033;
+
+  color: #ffffff;
+}
+
+.kadai-cta-content {
+  max-width: 700px;
+}
+
+.kadai-cta-content > span {
+  color: #34d399;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.kadai-cta-content h2 {
+  margin: 18px 0 20px;
+
+  font-size: clamp(42px, 5vw, 64px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.kadai-cta-content p {
+  max-width: 570px;
+
+  margin: 0 0 30px;
+
+  color: #cbd5e1;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.kadai-cta-button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 20px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #10b981;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.kadai-cta-button:hover {
+  background: #34d399;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .kadai-features-container {
+    width: calc(100% - 60px);
+  }
+
+  .kadai-features-hero {
+    padding-bottom: 75px;
+  }
+
+  .kadai-features-hero-content {
+    margin-top: 60px;
+  }
+
+  .kadai-features-hero-content h1 {
+    font-size: 58px;
+  }
+
+  .kadai-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .kadai-features-container {
+    width: calc(100% - 40px);
+  }
+
+  .kadai-features-hero {
+    padding: 35px 0 65px;
+  }
+
+  .kadai-features-hero-content {
+    margin-top: 50px;
+  }
+
+  .kadai-features-hero-content h1 {
+    font-size: 50px;
+    letter-spacing: -2px;
+  }
+
+  .kadai-features-hero-content p {
+    font-size: 15px;
+  }
+
+  .kadai-features-section {
+    padding: 75px 0;
+  }
+
+  .kadai-features-heading {
+    display: block;
+
+    margin-bottom: 40px;
+  }
+
+  .kadai-features-heading h2 {
+    font-size: 36px;
+  }
+
+  .kadai-features-heading p {
+    margin-top: 18px;
+  }
+
+  .kadai-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kadai-feature-card {
+    min-height: 280px;
+  }
+
+  .kadai-features-cta {
+    padding: 75px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .kadai-features-container {
+    width: calc(100% - 28px);
+  }
+
+  .kadai-features-hero {
+    padding: 30px 0 55px;
+  }
+
+  .kadai-features-hero-content {
+    margin-top: 42px;
+  }
+
+  .kadai-features-eyebrow {
+    padding: 7px 12px;
+    font-size: 9px;
+  }
+
+  .kadai-features-hero-content h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .kadai-features-hero-content p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .kadai-features-section {
+    padding: 60px 0;
+  }
+
+  .kadai-features-heading h2 {
+    font-size: 32px;
+  }
+
+  .kadai-feature-card {
+    min-height: 270px;
+    padding: 23px;
+  }
+
+  .kadai-feature-card h3 {
+    font-size: 20px;
+  }
+
+  .kadai-features-cta {
+    padding: 60px 0;
+  }
+
+
+/* Kadai green palette */
+.kadai-features-page {
+  background: #f7fbf8;
+  color: #12382b;
+}
+
+.kadai-features-hero {
+  background: linear-gradient(135deg, #e8f8ef 0%, #d5f0e1 52%, #c3e9d3 100%);
+}
+
+.kadai-features-eyebrow {
+  background: #c8efd8;
+  color: #087443;
+  border: 1px solid #a6dfbf;
+}
+
+.kadai-back-btn:hover,
+.kadai-features-heading span,
+.kadai-feature-link {
+  color: #087443;
+}
+
+.kadai-feature-card {
+  border-color: #d4e9dc;
+  background: #ffffff;
+}
+
+.kadai-feature-card:hover {
+  border-color: #79c99b;
+  box-shadow: 0 20px 45px rgba(10, 100, 61, 0.14);
+}
+
+.kadai-feature-icon {
+  background: #e1f7e9;
+  color: #087443;
+}
+
+.kadai-feature-card:hover .kadai-feature-icon {
+  background: #087443;
+}
+
+.kadai-features-cta {
+  background: linear-gradient(120deg, #12382b 0%, #075e3d 100%);
+}
+
+.kadai-cta-button {
+  background: #18a765;
+}
+
+.kadai-cta-button:hover {
+  background: #48d58b;
+}
+  .kadai-cta-content h2 {
+    font-size: 40px;
+  }
+
+  .kadai-cta-content p {
+    font-size: 14px;
+  }
+}

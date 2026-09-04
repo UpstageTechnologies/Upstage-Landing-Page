@@ -1,13 +1,12 @@
 import {
   FiGrid,
-  FiDollarSign,
-  FiUsers,
-  FiUserCheck,
-  FiClipboard,
+  FiHome,
   FiBookOpen,
+  FiClipboard,
   FiCalendar,
-  FiBarChart2,
-  FiBell,
+  FiLayers,
+  FiClock,
+  FiDollarSign,
   FiArrowLeft,
   FiArrowRight,
 } from "react-icons/fi";
@@ -21,63 +20,63 @@ const features = [
     icon: FiGrid,
     title: "Dashboard",
     description:
-      "Get a complete overview of your school's daily activities, students, staff, attendance and important updates.",
+      "Get a complete overview of your school's daily activities, attendance, classrooms, schedules and important information from one place.",
   },
+
   {
-    id: "accounts",
-    icon: FiDollarSign,
-    title: "Accounts",
+    id: "classrooms",
+    icon: FiHome,
+    title: "Classrooms",
     description:
-      "Manage student fees, payments, expenses, invoices and financial records efficiently from one place.",
+      "Organize classrooms, classes and sections while keeping classroom information structured and easy to manage.",
   },
+
   {
-    id: "students",
-    icon: FiUsers,
-    title: "Student Management",
+    id: "library",
+    icon: FiBookOpen,
+    title: "Library",
     description:
-      "Maintain student profiles, admission details, academic records, documents and other important information.",
+      "Manage books, library records, issue and return activities and keep your school's library information organized.",
   },
-  {
-    id: "staff",
-    icon: FiUserCheck,
-    title: "Staff Management",
-    description:
-      "Manage teachers and staff profiles, departments, responsibilities and other staff-related information.",
-  },
+
   {
     id: "attendance",
     icon: FiClipboard,
     title: "Attendance",
     description:
-      "Track student and staff attendance easily with accurate daily attendance records and reports.",
+      "Track attendance across your school with organized daily records for students, staff and other school activities.",
   },
-  {
-    id: "academics",
-    icon: FiBookOpen,
-    title: "Academic Management",
-    description:
-      "Manage classes, sections, subjects, academic activities and other essential academic information.",
-  },
+
   {
     id: "timetable",
-    icon: FiCalendar,
+    icon: FiClock,
     title: "Timetable",
     description:
-      "Create and manage class schedules, teacher schedules and daily timetables with ease.",
+      "Create and manage class schedules, subject periods and daily timetables to keep your school organized.",
   },
+
   {
-    id: "exams",
-    icon: FiBarChart2,
-    title: "Exams & Results",
+    id: "courses",
+    icon: FiLayers,
+    title: "Courses",
     description:
-      "Manage examinations, marks, grades and results while keeping student performance records organized.",
+      "Manage courses, subjects and academic information while keeping your school's learning structure organized.",
   },
+
   {
-    id: "communication",
-    icon: FiBell,
-    title: "Communication",
+    id: "calendar",
+    icon: FiCalendar,
+    title: "Calendar",
     description:
-      "Share announcements, notices and important updates with students, parents and staff.",
+      "Plan school events, holidays, activities and important dates with a centralized school calendar.",
+  },
+
+  {
+    id: "accounts",
+    icon: FiDollarSign,
+    title: "Accounts & Inventory",
+    description:
+      "Manage expenses, inventory, fee collection and important financial records through one centralized system.",
   },
 ];
 
@@ -86,7 +85,6 @@ export default function SchoolManagementFeatures() {
 
   return (
     <main className="school-features-page">
-
       <section className="school-features-header">
 
         <button
@@ -109,7 +107,7 @@ export default function SchoolManagementFeatures() {
 
         <p>
           Powerful tools designed to simplify school administration,
-          improve productivity and manage your entire institution
+          organize daily operations and manage your entire institution
           from one centralized platform.
         </p>
 
@@ -126,7 +124,7 @@ export default function SchoolManagementFeatures() {
             return (
               <div
                 className="school-feature-card"
-                key={feature.title}
+                key={feature.id}
               >
 
                 <div className="school-feature-top">
@@ -141,11 +139,25 @@ export default function SchoolManagementFeatures() {
 
                 </div>
 
-                <h2>{feature.title}</h2>
 
-                <p>{feature.description}</p>
+                <h2>
+                  {feature.title}
+                </h2>
 
-                <button className="school-feature-link" onClick={() => navigate(`/school-management/features/${feature.id}`)}>
+
+                <p>
+                  {feature.description}
+                </p>
+
+
+                <button
+                  className="school-feature-link"
+                  onClick={() =>
+                    navigate(
+                      `/school-management/features/${feature.id}`
+                    )
+                  }
+                >
                   Explore
                   <FiArrowRight />
                 </button>
@@ -174,11 +186,13 @@ export default function SchoolManagementFeatures() {
           </h2>
 
           <p>
-            Bring administration, academics, attendance and
-            communication together in one powerful platform.
+            Bring classrooms, attendance, academics,
+            scheduling and administration together
+            in one powerful platform.
           </p>
 
         </div>
+
 
         <button
           onClick={() => navigate("/school-management")}

@@ -1,8 +1,11 @@
 .school-features-page {
   width: 100%;
   min-height: 100vh;
+
   background: #ffffff;
+
   color: #172033;
+
   overflow: hidden;
 }
 
@@ -10,10 +13,16 @@
   box-sizing: border-box;
 }
 
+
+/* =========================================
+   HEADER
+========================================= */
+
 .school-features-header {
   position: relative;
 
   width: min(900px, 90%);
+
   margin: 0 auto;
 
   padding: 90px 0 65px;
@@ -29,6 +38,7 @@
   color: #059669;
 
   font-size: 12px;
+
   font-weight: 700;
 
   letter-spacing: 2px;
@@ -62,19 +72,35 @@
   line-height: 1.7;
 }
 
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
 .school-back-btn {
   position: absolute;
+
   top: 30px;
   left: 0;
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 7px;
+
   padding: 9px 14px;
+
   border: 1px solid #d1fae5;
+
   border-radius: 7px;
+
   background: #ffffff;
+
   color: #475467;
+
   font-size: 13px;
+
   font-weight: 600;
 
   cursor: pointer;
@@ -90,6 +116,11 @@
   background: #f0fdf4;
 }
 
+
+/* =========================================
+   FEATURES SECTION
+========================================= */
+
 .school-features-section {
   width: min(1200px, 90%);
 
@@ -98,6 +129,11 @@
   padding: 10px 0 90px;
 }
 
+
+/* =========================================
+   FEATURES GRID
+========================================= */
+
 .school-features-grid {
   display: grid;
 
@@ -105,6 +141,11 @@
 
   gap: 20px;
 }
+
+
+/* =========================================
+   FEATURE CARD
+========================================= */
 
 .school-feature-card {
   position: relative;
@@ -134,10 +175,16 @@
     0 20px 50px rgba(5, 150, 105, 0.12);
 }
 
+
+/* =========================================
+   CARD TOP
+========================================= */
+
 .school-feature-top {
   display: flex;
 
   align-items: center;
+
   justify-content: space-between;
 
   margin-bottom: 30px;
@@ -153,22 +200,39 @@
   letter-spacing: 1px;
 }
 
+
+/* =========================================
+   CARD ICON
+========================================= */
+
 .school-feature-icon {
   width: 48px;
   height: 48px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 12px;
 
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  background:
+    linear-gradient(
+      135deg,
+      #d1fae5 0%,
+      #a7f3d0 100%
+    );
 
   color: #059669;
 
   font-size: 21px;
 }
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
 
 .school-feature-card h2 {
   margin: 0 0 12px;
@@ -190,6 +254,11 @@
   line-height: 1.7;
 }
 
+
+/* =========================================
+   EXPLORE BUTTON
+========================================= */
+
 .school-feature-link {
   position: absolute;
 
@@ -197,6 +266,7 @@
   bottom: 25px;
 
   display: flex;
+
   align-items: center;
 
   gap: 8px;
@@ -220,9 +290,15 @@
   transition: transform 0.25s ease;
 }
 
-.school-feature-card:hover .school-feature-link svg {
+.school-feature-card:hover
+.school-feature-link svg {
   transform: translateX(5px);
 }
+
+
+/* =========================================
+   CTA
+========================================= */
 
 .school-features-cta {
   width: min(1200px, 90%);
@@ -232,7 +308,9 @@
   padding: 55px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   gap: 40px;
@@ -259,7 +337,7 @@
 }
 
 .school-features-cta h2 {
-  margin: 12px 0 12px;
+  margin: 12px 0;
 
   font-size: 35px;
 
@@ -278,10 +356,16 @@
   line-height: 1.7;
 }
 
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
 .school-features-cta button {
   flex-shrink: 0;
 
   display: flex;
+
   align-items: center;
 
   gap: 10px;
@@ -292,7 +376,12 @@
 
   border-radius: 8px;
 
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background:
+    linear-gradient(
+      135deg,
+      #10b981 0%,
+      #059669 100%
+    );
 
   color: #ffffff;
 
@@ -307,8 +396,15 @@
 
 .school-features-cta button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(5, 150, 105, 0.35);
+
+  box-shadow:
+    0 10px 25px rgba(5, 150, 105, 0.35);
 }
+
+
+/* =========================================
+   1024px
+========================================= */
 
 @media (max-width: 1024px) {
 
@@ -330,6 +426,11 @@
 
 }
 
+
+/* =========================================
+   768px
+========================================= */
+
 @media (max-width: 768px) {
 
   .school-features-header {
@@ -350,6 +451,9 @@
     font-size: 15px;
   }
 
+
+  /* FEATURES */
+
   .school-features-section {
     width: 88%;
   }
@@ -363,6 +467,9 @@
   .school-feature-card {
     min-height: 260px;
   }
+
+
+  /* CTA */
 
   .school-features-cta {
     width: 88%;
@@ -382,6 +489,10 @@
 
 }
 
+
+/* =========================================
+   480px
+========================================= */
 
 @media (max-width: 480px) {
 
@@ -413,6 +524,9 @@
     line-height: 1.65;
   }
 
+
+  /* FEATURES */
+
   .school-features-section {
     width: 90%;
   }
@@ -437,8 +551,12 @@
 
   .school-feature-link {
     left: 22px;
+
     bottom: 21px;
   }
+
+
+  /* CTA */
 
   .school-features-cta {
     width: 90%;

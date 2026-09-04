@@ -3,40 +3,41 @@ import {
   FiArrowRight,
   FiCheckCircle,
   FiGrid,
-  FiDollarSign,
-  FiUsers,
-  FiUserCheck,
-  FiClipboard,
+  FiHome,
   FiBookOpen,
+  FiClipboard,
   FiCalendar,
-  FiBarChart2,
-  FiBell,
-  FiCheck,
+  FiLayers,
   FiClock,
+  FiDollarSign,
+  FiBarChart2,
   FiFileText,
   FiUser,
-  FiMessageSquare,
+  FiUsers,
+  FiPackage,
+  FiCheck,
+  FiBook,
+  FiMapPin,
 } from "react-icons/fi";
 
 import { useNavigate, useParams } from "react-router-dom";
 import "./SchoolFeaturesDetails.css";
 
 const featureData = {
-
   dashboard: {
     icon: FiGrid,
     eyebrow: "SCHOOL DASHBOARD",
     title: "Everything at a Glance.",
     description:
-      "Get a complete overview of your school's daily activities, students, staff, attendance and important information from one centralized dashboard.",
+      "Get a complete overview of your school's daily activities, classrooms, attendance, schedules and important information from one centralized dashboard.",
 
     points: [
-      "Student overview",
-      "Staff overview",
+      "School overview",
+      "Classroom overview",
       "Attendance summary",
-      "Fee and payment summary",
-      "Recent activities",
+      "Today's activities",
       "Important notifications",
+      "Quick access to modules",
     ],
 
     sections: [
@@ -48,41 +49,73 @@ const featureData = {
       },
       {
         type: "dashboard-activity",
-        title: "Make Better Decisions",
+        title: "Monitor Daily Activities",
         text:
-          "View important statistics, activities and reports at a glance so your school administration can make informed decisions quickly.",
+          "View important statistics, attendance information and recent activities at a glance so your school administration can stay informed throughout the day.",
       },
     ],
   },
 
-  accounts: {
-    icon: FiDollarSign,
-    eyebrow: "SCHOOL ACCOUNTS",
-    title: "Simplify Your School Finances.",
+  classrooms: {
+    icon: FiHome,
+    eyebrow: "CLASSROOM MANAGEMENT",
+    title: "Organize Every Classroom.",
     description:
-      "Manage fees, payments, expenses, receipts and financial records efficiently with a centralized accounts management system.",
+      "Manage classrooms, classes, sections, room allocation and classroom information through one organized platform.",
 
     points: [
-      "Fee collection",
-      "Payment tracking",
-      "Expense management",
-      "Receipt management",
-      "Due fee tracking",
-      "Financial reports",
+      "Classroom management",
+      "Class & section allocation",
+      "Room management",
+      "Classroom capacity",
+      "Room availability",
+      "Classroom schedules",
     ],
 
     sections: [
       {
-        type: "accounts",
-        title: "Manage Fees Easily",
+        type: "classrooms",
+        title: "Manage Classrooms Easily",
         text:
-          "Keep track of student fees, payments and pending dues without relying on multiple systems or manual records.",
+          "Keep classroom information organized with details about rooms, classes, sections and available capacity in one centralized system.",
       },
       {
-        type: "accounts-records",
-        title: "Clear Financial Records",
+        type: "classrooms-allocation",
+        title: "Simplify Room Allocation",
         text:
-          "Maintain organized financial information and generate useful reports for better visibility into your school's finances.",
+          "Assign classes and sections to suitable classrooms while keeping room availability and classroom schedules easy to manage.",
+      },
+    ],
+  },
+
+  library: {
+    icon: FiBookOpen,
+    eyebrow: "LIBRARY MANAGEMENT",
+    title: "Manage Your Library Smarter.",
+    description:
+      "Organize books, library records, issue and return activities and keep your school's entire library information in one place.",
+
+    points: [
+      "Book management",
+      "Book availability",
+      "Issue & return",
+      "Library records",
+      "Due date tracking",
+      "Member management",
+    ],
+
+    sections: [
+      {
+        type: "library",
+        title: "Keep Your Library Organized",
+        text:
+          "Maintain a clear record of books, available copies and library resources so staff can quickly find the information they need.",
+      },
+      {
+        type: "library-activity",
+        title: "Track Every Book Activity",
+        text:
+          "Monitor issued books, returned books and due dates to make everyday library operations simple and organized.",
       },
     ],
   },
@@ -92,7 +125,7 @@ const featureData = {
     eyebrow: "ATTENDANCE MANAGEMENT",
     title: "Attendance Made Simple.",
     description:
-      "Track student and staff attendance accurately and manage attendance records from one easy-to-use platform.",
+      "Track student and staff attendance accurately and manage daily attendance records from one easy-to-use platform.",
 
     points: [
       "Student attendance",
@@ -114,205 +147,143 @@ const featureData = {
         type: "attendance-trends",
         title: "Understand Attendance Trends",
         text:
-          "Use attendance reports and summaries to understand attendance patterns and maintain accurate school records.",
-      },
-    ],
-  },
-
-  students: {
-    icon: FiUsers,
-    eyebrow: "STUDENT MANAGEMENT",
-    title: "Manage Every Student in One Place.",
-    description:
-      "Maintain student profiles, admission information, academic records, documents and other important details through one centralized system.",
-
-    points: [
-      "Student profiles",
-      "Admissions",
-      "Class & section",
-      "Student documents",
-      "Academic history",
-      "Student records",
-    ],
-
-    sections: [
-      {
-        type: "students",
-        title: "Complete Student Profiles",
-        text:
-          "Keep important student information organized and easily accessible whenever administrators or staff need it.",
-      },
-      {
-        type: "students-admin",
-        title: "Simplified Student Administration",
-        text:
-          "Reduce manual work by keeping admission, academic and student information together in one centralized platform.",
-      },
-    ],
-  },
-
-  staff: {
-    icon: FiUserCheck,
-    eyebrow: "STAFF MANAGEMENT",
-    title: "Manage Your School Staff Efficiently.",
-    description:
-      "Organize teacher and staff information, departments, responsibilities and other important staff records in one place.",
-
-    points: [
-      "Staff profiles",
-      "Teacher management",
-      "Department management",
-      "Staff records",
-      "Responsibilities",
-      "Staff information",
-    ],
-
-    sections: [
-      {
-        type: "staff",
-        title: "Centralized Staff Information",
-        text:
-          "Keep teacher and staff information organized so administrators can quickly access the details they need.",
-      },
-      {
-        type: "staff-admin",
-        title: "Better Staff Administration",
-        text:
-          "Simplify staff-related administration with a centralized system designed for educational institutions.",
-      },
-    ],
-  },
-
-  academics: {
-    icon: FiBookOpen,
-    eyebrow: "ACADEMIC MANAGEMENT",
-    title: "Build a Better Academic Workflow.",
-    description:
-      "Manage classes, sections, subjects and academic activities from one organized academic management platform.",
-
-    points: [
-      "Class management",
-      "Section management",
-      "Subject management",
-      "Academic activities",
-      "Academic records",
-      "Teacher assignments",
-    ],
-
-    sections: [
-      {
-        type: "academics",
-        title: "Organize Academic Information",
-        text:
-          "Keep classes, sections and subjects organized while giving administrators a clear view of academic activities.",
-      },
-      {
-        type: "academics-admin",
-        title: "Simplify Academic Administration",
-        text:
-          "Bring important academic information together to reduce administrative effort and improve organization.",
+          "Use attendance summaries and reports to understand attendance patterns and maintain accurate school records.",
       },
     ],
   },
 
   timetable: {
-    icon: FiCalendar,
+    icon: FiClock,
     eyebrow: "TIMETABLE MANAGEMENT",
     title: "Plan Every School Day Better.",
     description:
-      "Create and manage class schedules, teacher schedules and daily timetables with an organized scheduling system.",
+      "Create and manage class schedules, subject periods and teacher timetables with an organized scheduling system.",
 
     points: [
       "Class timetable",
       "Teacher timetable",
       "Subject scheduling",
       "Daily schedules",
-      "Schedule management",
+      "Period management",
       "Academic planning",
     ],
 
     sections: [
       {
         type: "timetable",
-        title: "Organized Scheduling",
+        title: "Create Organized Timetables",
         text:
-          "Create structured timetables for classes and teachers while keeping daily schedules easy to manage.",
+          "Create structured daily timetables for classes while keeping subjects, periods and classrooms easy to manage.",
       },
       {
         type: "timetable-planning",
         title: "Keep Everyone on Schedule",
         text:
-          "Make school scheduling easier by organizing subjects, classes and teacher schedules in one place.",
+          "Plan teacher schedules and class periods in one place to reduce scheduling conflicts and improve daily organization.",
       },
     ],
   },
 
-  exams: {
-    icon: FiBarChart2,
-    eyebrow: "EXAMS & RESULTS",
-    title: "Manage Exams and Results with Ease.",
+  courses: {
+    icon: FiLayers,
+    eyebrow: "COURSE MANAGEMENT",
+    title: "Build a Better Academic Structure.",
     description:
-      "Organize examinations, marks, grades and student results while keeping academic performance records structured.",
+      "Manage courses, subjects, classes and teacher assignments while keeping your school's academic structure organized.",
 
     points: [
-      "Exam management",
-      "Marks entry",
-      "Grade management",
-      "Result management",
-      "Performance records",
-      "Exam reports",
+      "Course management",
+      "Subject management",
+      "Class management",
+      "Course assignments",
+      "Teacher assignments",
+      "Academic structure",
     ],
 
     sections: [
       {
-        type: "exams",
-        title: "Simplify Examination Management",
+        type: "courses",
+        title: "Organize Courses & Subjects",
         text:
-          "Manage examinations and marks in an organized way while reducing the effort required for manual record keeping.",
+          "Keep courses and subjects organized by class while giving administrators a clear view of the academic structure.",
       },
       {
-        type: "exams-performance",
-        title: "Understand Student Performance",
+        type: "courses-assignment",
+        title: "Manage Teacher Assignments",
         text:
-          "Keep student results and performance information organized for better academic tracking.",
+          "Assign teachers to subjects and classes while keeping academic responsibilities organized and easy to track.",
       },
     ],
   },
 
-  communication: {
-    icon: FiBell,
-    eyebrow: "SCHOOL COMMUNICATION",
-    title: "Keep Everyone Connected.",
+  calendar: {
+    icon: FiCalendar,
+    eyebrow: "SCHOOL CALENDAR",
+    title: "Plan Every Important Date.",
     description:
-      "Share announcements, notices and important updates with students, parents and staff through a centralized communication system.",
+      "Manage school events, holidays, activities, meetings and important academic dates through one centralized calendar.",
 
     points: [
-      "School announcements",
-      "Important notices",
-      "Parent communication",
-      "Staff communication",
-      "Updates",
-      "Notifications",
+      "Academic calendar",
+      "School events",
+      "Holiday management",
+      "Important dates",
+      "Meetings",
+      "Activity planning",
     ],
 
     sections: [
       {
-        type: "communication",
-        title: "One Place for Important Updates",
+        type: "calendar",
+        title: "One Calendar for Your School",
         text:
-          "Keep students, parents and staff informed by managing important school announcements and updates from one platform.",
+          "Bring academic events, holidays, activities and important dates together so everyone can stay aware of the school schedule.",
       },
       {
-        type: "communication-connect",
-        title: "Improve School Communication",
+        type: "calendar-events",
+        title: "Never Miss an Important Event",
         text:
-          "Make communication more organized and accessible so important information reaches the right people.",
+          "Plan upcoming events and activities in advance while keeping important school dates easy to view and manage.",
+      },
+    ],
+  },
+
+  accounts: {
+    icon: FiDollarSign,
+    eyebrow: "ACCOUNTS & INVENTORY",
+    title: "Simplify School Administration.",
+    description:
+      "Manage fee collection, expenses, financial records and inventory through one centralized accounts and inventory system.",
+
+    points: [
+      "Fee collection",
+      "Payment tracking",
+      "Expense management",
+      "Inventory management",
+      "Stock tracking",
+      "Financial records",
+    ],
+
+    sections: [
+      {
+        type: "accounts",
+        title: "Manage School Finances",
+        text:
+          "Keep track of fees, payments and expenses while maintaining clear financial information in one centralized system.",
+      },
+      {
+        type: "inventory",
+        title: "Keep Inventory Under Control",
+        text:
+          "Track school supplies, available stock and inventory movements so administrators can easily monitor what is available and what needs attention.",
       },
     ],
   },
 };
 
 function FeaturePreview({ type }) {
+
+  /* DASHBOARD */
 
   if (type === "dashboard") {
     return (
@@ -336,9 +307,9 @@ function FeaturePreview({ type }) {
           </div>
 
           <div className="preview-stat">
-            <small>Teachers</small>
-            <strong>120</strong>
-            <span className="preview-positive">+4%</span>
+            <small>Classes</small>
+            <strong>32</strong>
+            <span className="preview-positive">Active</span>
           </div>
 
           <div className="preview-stat">
@@ -357,18 +328,18 @@ function FeaturePreview({ type }) {
           </div>
 
           <div className="preview-row">
-            <span>New Admission</span>
-            <b>Today</b>
-          </div>
-
-          <div className="preview-row">
-            <span>Fee Payment</span>
-            <b>Today</b>
-          </div>
-
-          <div className="preview-row">
             <span>Attendance Updated</span>
             <b>10:30 AM</b>
+          </div>
+
+          <div className="preview-row">
+            <span>New Classroom Added</span>
+            <b>Today</b>
+          </div>
+
+          <div className="preview-row">
+            <span>Fee Collection Updated</span>
+            <b>Today</b>
           </div>
 
         </div>
@@ -416,6 +387,7 @@ function FeaturePreview({ type }) {
         </div>
 
         <div className="preview-summary">
+
           <div>
             <small>Overall</small>
             <strong>94.8%</strong>
@@ -425,52 +397,6 @@ function FeaturePreview({ type }) {
             <small>Growth</small>
             <strong className="preview-positive">+8.4%</strong>
           </div>
-        </div>
-
-      </div>
-    );
-  }
-
-  if (type === "accounts") {
-    return (
-      <div className="preview-box">
-
-        <div className="preview-top">
-          <div>
-            <small>Finance</small>
-            <h4>Fee Collection</h4>
-          </div>
-
-          <FiDollarSign className="preview-main-icon" />
-        </div>
-
-        <div className="money-card">
-          <small>Total Collected</small>
-          <strong>₹1,84,500</strong>
-          <span>+12.5% this month</span>
-        </div>
-
-        <div className="preview-table">
-
-          <div className="preview-table-title">
-            <span>Recent Payments</span>
-            <small>View all</small>
-          </div>
-
-          <div className="preview-row">
-            <span>Arun Kumar</span>
-            <b className="status-paid">Paid ₹15,000</b>
-          </div>
-
-          <div className="preview-row">
-            <span>Priya S</span>
-            <b className="status-paid">Paid ₹12,000</b>
-          </div>
-
-          <div className="preview-row">
-            <span>Rahul M</span>
-            <b className="status-pending">Pending</b>
-          </div>
 
         </div>
 
@@ -479,60 +405,255 @@ function FeaturePreview({ type }) {
   }
 
 
-  /* ACCOUNTS RECORDS */
+  /* CLASSROOMS */
 
-  if (type === "accounts-records") {
+  if (type === "classrooms") {
     return (
       <div className="preview-box">
 
         <div className="preview-top">
           <div>
-            <small>Financial Records</small>
-            <h4>Monthly Summary</h4>
+            <small>Classroom Management</small>
+            <h4>Classroom Overview</h4>
           </div>
 
-          <FiFileText className="preview-main-icon" />
+          <FiHome className="preview-main-icon" />
         </div>
 
         <div className="record-grid">
 
           <div>
-            <small>Income</small>
-            <strong>₹2.45L</strong>
+            <small>Rooms</small>
+            <strong>24</strong>
           </div>
 
           <div>
-            <small>Expenses</small>
-            <strong>₹86K</strong>
+            <small>Classes</small>
+            <strong>18</strong>
           </div>
 
           <div>
-            <small>Balance</small>
-            <strong>₹1.59L</strong>
+            <small>Capacity</small>
+            <strong>960</strong>
           </div>
 
         </div>
 
-        <div className="mini-progress">
-          <div>
-            <span>Fee Collection</span>
-            <b>84%</b>
+        <div className="preview-table">
+
+          <div className="preview-table-title">
+            <span>Classrooms</span>
+            <small>View all</small>
           </div>
 
-          <div className="progress-track">
-            <span style={{ width: "84%" }}></span>
+          <div className="preview-row">
+            <span>Room 201 · Class 10-A</span>
+            <b className="status-paid">Active</b>
           </div>
+
+          <div className="preview-row">
+            <span>Room 202 · Class 10-B</span>
+            <b className="status-paid">Active</b>
+          </div>
+
+          <div className="preview-row">
+            <span>Lab 01 · Computer</span>
+            <b className="status-pending">Available</b>
+          </div>
+
         </div>
 
-        <div className="mini-progress">
+      </div>
+    );
+  }
+
+
+  /* CLASSROOM ALLOCATION */
+
+  if (type === "classrooms-allocation") {
+    return (
+      <div className="preview-box">
+
+        <div className="preview-top">
           <div>
-            <span>Expense Tracking</span>
-            <b>67%</b>
+            <small>Room Allocation</small>
+            <h4>Classroom Planning</h4>
           </div>
 
-          <div className="progress-track">
-            <span style={{ width: "67%" }}></span>
+          <FiMapPin className="preview-main-icon" />
+        </div>
+
+        <div className="assignment-row">
+
+          <div className="assignment-icon">
+            <FiHome />
           </div>
+
+          <div>
+            <strong>Room 201</strong>
+            <span>Class 10-A · 42 Students</span>
+          </div>
+
+          <FiCheck className="assignment-check" />
+
+        </div>
+
+        <div className="assignment-row">
+
+          <div className="assignment-icon">
+            <FiHome />
+          </div>
+
+          <div>
+            <strong>Room 202</strong>
+            <span>Class 10-B · 39 Students</span>
+          </div>
+
+          <FiCheck className="assignment-check" />
+
+        </div>
+
+        <div className="assignment-row">
+
+          <div className="assignment-icon">
+            <FiHome />
+          </div>
+
+          <div>
+            <strong>Lab 01</strong>
+            <span>Computer Lab · Available</span>
+          </div>
+
+          <FiCheck className="assignment-check" />
+
+        </div>
+
+      </div>
+    );
+  }
+
+
+  /* LIBRARY */
+
+  if (type === "library") {
+    return (
+      <div className="preview-box">
+
+        <div className="preview-top">
+          <div>
+            <small>Library Management</small>
+            <h4>Library Overview</h4>
+          </div>
+
+          <FiBookOpen className="preview-main-icon" />
+        </div>
+
+        <div className="preview-stat-grid">
+
+          <div className="preview-stat">
+            <small>Total Books</small>
+            <strong>2,450</strong>
+          </div>
+
+          <div className="preview-stat">
+            <small>Issued</small>
+            <strong>186</strong>
+          </div>
+
+          <div className="preview-stat">
+            <small>Available</small>
+            <strong>2,264</strong>
+          </div>
+
+        </div>
+
+        <div className="preview-table">
+
+          <div className="preview-table-title">
+            <span>Popular Books</span>
+            <small>View all</small>
+          </div>
+
+          <div className="preview-row">
+            <span>Mathematics - Grade 10</span>
+            <b>12 Copies</b>
+          </div>
+
+          <div className="preview-row">
+            <span>Science Essentials</span>
+            <b>8 Copies</b>
+          </div>
+
+          <div className="preview-row">
+            <span>English Grammar</span>
+            <b>15 Copies</b>
+          </div>
+
+        </div>
+
+      </div>
+    );
+  }
+
+
+  /* LIBRARY ACTIVITY */
+
+  if (type === "library-activity") {
+    return (
+      <div className="preview-box">
+
+        <div className="preview-top">
+          <div>
+            <small>Library Activity</small>
+            <h4>Issue & Return</h4>
+          </div>
+
+          <FiBook className="preview-main-icon" />
+        </div>
+
+        <div className="announcement-card">
+
+          <div className="announcement-icon">
+            <FiBookOpen />
+          </div>
+
+          <div>
+            <strong>Arun Kumar</strong>
+            <span>Book issued · Mathematics</span>
+          </div>
+
+          <small>Today</small>
+
+        </div>
+
+        <div className="announcement-card">
+
+          <div className="announcement-icon">
+            <FiCheck />
+          </div>
+
+          <div>
+            <strong>Priya S</strong>
+            <span>Book returned · Science</span>
+          </div>
+
+          <small>Today</small>
+
+        </div>
+
+        <div className="announcement-card">
+
+          <div className="announcement-icon">
+            <FiClock />
+          </div>
+
+          <div>
+            <strong>Rahul M</strong>
+            <span>Return due · Tomorrow</span>
+          </div>
+
+          <small>Due</small>
+
         </div>
 
       </div>
@@ -627,6 +748,7 @@ function FeaturePreview({ type }) {
         </div>
 
         <div className="preview-summary">
+
           <div>
             <small>Average</small>
             <strong>91.6%</strong>
@@ -636,321 +758,7 @@ function FeaturePreview({ type }) {
             <small>Improvement</small>
             <strong className="preview-positive">+6.2%</strong>
           </div>
-        </div>
 
-      </div>
-    );
-  }
-
-
-  /* STUDENTS */
-
-  if (type === "students") {
-    return (
-      <div className="preview-box">
-
-        <div className="profile-header">
-          <div className="profile-avatar">
-            <FiUser />
-          </div>
-
-          <div>
-            <small>Student Profile</small>
-            <h4>Arun Kumar</h4>
-            <span>Class 10 - A</span>
-          </div>
-
-          <span className="profile-active">Active</span>
-        </div>
-
-        <div className="profile-details">
-
-          <div>
-            <small>Admission ID</small>
-            <strong>STU-2024-001</strong>
-          </div>
-
-          <div>
-            <small>Roll Number</small>
-            <strong>24</strong>
-          </div>
-
-          <div>
-            <small>Attendance</small>
-            <strong>96%</strong>
-          </div>
-
-          <div>
-            <small>Performance</small>
-            <strong>A+</strong>
-          </div>
-
-        </div>
-
-        <div className="profile-tabs">
-          <span className="active-tab">Overview</span>
-          <span>Academic</span>
-          <span>Documents</span>
-        </div>
-
-      </div>
-    );
-  }
-
-
-  /* STUDENT ADMIN */
-
-  if (type === "students-admin") {
-    return (
-      <div className="preview-box">
-
-        <div className="preview-top">
-          <div>
-            <small>Student Management</small>
-            <h4>All Students</h4>
-          </div>
-
-          <FiUsers className="preview-main-icon" />
-        </div>
-
-        <div className="search-preview">
-          Search students...
-          <span>⌕</span>
-        </div>
-
-        <div className="preview-table">
-
-          <div className="preview-row">
-            <span>Arun Kumar · 10-A</span>
-            <b className="status-paid">Active</b>
-          </div>
-
-          <div className="preview-row">
-            <span>Priya S · 10-B</span>
-            <b className="status-paid">Active</b>
-          </div>
-
-          <div className="preview-row">
-            <span>Rahul M · 9-A</span>
-            <b className="status-pending">Pending</b>
-          </div>
-
-        </div>
-
-      </div>
-    );
-  }
-
-
-  /* STAFF */
-
-  if (type === "staff") {
-    return (
-      <div className="preview-box">
-
-        <div className="preview-top">
-          <div>
-            <small>Staff Profile</small>
-            <h4>Teacher Information</h4>
-          </div>
-
-          <FiUserCheck className="preview-main-icon" />
-        </div>
-
-        <div className="staff-profile">
-
-          <div className="staff-avatar">
-            <FiUserCheck />
-          </div>
-
-          <div>
-            <strong>Meena Krishnan</strong>
-            <span>Mathematics Teacher</span>
-            <small>Department · Mathematics</small>
-          </div>
-
-          <span className="profile-active">Active</span>
-
-        </div>
-
-        <div className="staff-info-grid">
-
-          <div>
-            <small>Experience</small>
-            <strong>8 Years</strong>
-          </div>
-
-          <div>
-            <small>Classes</small>
-            <strong>8 - 10</strong>
-          </div>
-
-          <div>
-            <small>Attendance</small>
-            <strong>98%</strong>
-          </div>
-
-        </div>
-
-      </div>
-    );
-  }
-
-
-  /* STAFF ADMIN */
-
-  if (type === "staff-admin") {
-    return (
-      <div className="preview-box">
-
-        <div className="preview-top">
-          <div>
-            <small>Staff Management</small>
-            <h4>Staff Directory</h4>
-          </div>
-
-          <FiUsers className="preview-main-icon" />
-        </div>
-
-        <div className="preview-table">
-
-          <div className="preview-table-title">
-            <span>Staff Member</span>
-            <small>Department</small>
-          </div>
-
-          <div className="preview-row">
-            <span>Meena Krishnan</span>
-            <b>Maths</b>
-          </div>
-
-          <div className="preview-row">
-            <span>David Joseph</span>
-            <b>Science</b>
-          </div>
-
-          <div className="preview-row">
-            <span>Anita Raj</span>
-            <b>English</b>
-          </div>
-
-        </div>
-
-      </div>
-    );
-  }
-
-
-  /* ACADEMICS */
-
-  if (type === "academics") {
-    return (
-      <div className="preview-box">
-
-        <div className="preview-top">
-          <div>
-            <small>Academic Management</small>
-            <h4>Classes & Subjects</h4>
-          </div>
-
-          <FiBookOpen className="preview-main-icon" />
-        </div>
-
-        <div className="academic-grid">
-
-          <div>
-            <strong>10-A</strong>
-            <span>42 Students</span>
-          </div>
-
-          <div>
-            <strong>10-B</strong>
-            <span>39 Students</span>
-          </div>
-
-          <div>
-            <strong>9-A</strong>
-            <span>41 Students</span>
-          </div>
-
-        </div>
-
-        <div className="subject-list">
-
-          <div>
-            <span>Mathematics</span>
-            <b>Mr. Kumar</b>
-          </div>
-
-          <div>
-            <span>Science</span>
-            <b>Ms. Meena</b>
-          </div>
-
-          <div>
-            <span>English</span>
-            <b>Mrs. Anita</b>
-          </div>
-
-        </div>
-
-      </div>
-    );
-  }
-
-
-  /* ACADEMICS ADMIN */
-
-  if (type === "academics-admin") {
-    return (
-      <div className="preview-box">
-
-        <div className="preview-top">
-          <div>
-            <small>Academic Planning</small>
-            <h4>Subject Assignments</h4>
-          </div>
-
-          <FiBookOpen className="preview-main-icon" />
-        </div>
-
-        <div className="assignment-row">
-          <div className="assignment-icon">
-            <FiBookOpen />
-          </div>
-
-          <div>
-            <strong>Mathematics</strong>
-            <span>Class 10-A · 10-B</span>
-          </div>
-
-          <FiCheck className="assignment-check" />
-        </div>
-
-        <div className="assignment-row">
-          <div className="assignment-icon">
-            <FiBookOpen />
-          </div>
-
-          <div>
-            <strong>Science</strong>
-            <span>Class 9-A · 10-A</span>
-          </div>
-
-          <FiCheck className="assignment-check" />
-        </div>
-
-        <div className="assignment-row">
-          <div className="assignment-icon">
-            <FiBookOpen />
-          </div>
-
-          <div>
-            <strong>English</strong>
-            <span>Class 8-A · 9-A</span>
-          </div>
-
-          <FiCheck className="assignment-check" />
         </div>
 
       </div>
@@ -970,7 +778,7 @@ function FeaturePreview({ type }) {
             <h4>Monday · Class 10-A</h4>
           </div>
 
-          <FiCalendar className="preview-main-icon" />
+          <FiClock className="preview-main-icon" />
         </div>
 
         <div className="schedule-list">
@@ -1018,7 +826,7 @@ function FeaturePreview({ type }) {
             <h4>Teacher Schedule</h4>
           </div>
 
-          <FiClock className="preview-main-icon" />
+          <FiCalendar className="preview-main-icon" />
         </div>
 
         <div className="weekly-grid">
@@ -1058,49 +866,55 @@ function FeaturePreview({ type }) {
   }
 
 
-  /* EXAMS */
+  /* COURSES */
 
-  if (type === "exams") {
+  if (type === "courses") {
     return (
       <div className="preview-box">
 
         <div className="preview-top">
           <div>
-            <small>Examination</small>
-            <h4>Marks Entry</h4>
+            <small>Course Management</small>
+            <h4>Courses & Subjects</h4>
           </div>
 
-          <FiClipboard className="preview-main-icon" />
+          <FiLayers className="preview-main-icon" />
         </div>
 
-        <div className="marks-table">
+        <div className="academic-grid">
 
-          <div className="marks-head">
-            <span>Student</span>
-            <span>Maths</span>
+          <div>
+            <strong>Mathematics</strong>
+            <span>Class 10</span>
+          </div>
+
+          <div>
+            <strong>Science</strong>
+            <span>Class 10</span>
+          </div>
+
+          <div>
+            <strong>English</strong>
+            <span>Class 10</span>
+          </div>
+
+        </div>
+
+        <div className="subject-list">
+
+          <div>
+            <span>Mathematics</span>
+            <b>Mr. Kumar</b>
+          </div>
+
+          <div>
             <span>Science</span>
-            <span>Total</span>
+            <b>Ms. Meena</b>
           </div>
 
-          <div className="marks-row">
-            <span>Arun</span>
-            <b>92</b>
-            <b>88</b>
-            <strong>180</strong>
-          </div>
-
-          <div className="marks-row">
-            <span>Priya</span>
-            <b>86</b>
-            <b>91</b>
-            <strong>177</strong>
-          </div>
-
-          <div className="marks-row">
-            <span>Rahul</span>
-            <b>78</b>
-            <b>84</b>
-            <strong>162</strong>
+          <div>
+            <span>English</span>
+            <b>Mrs. Anita</b>
           </div>
 
         </div>
@@ -1110,48 +924,63 @@ function FeaturePreview({ type }) {
   }
 
 
-  /* EXAM PERFORMANCE */
+  /* COURSE ASSIGNMENT */
 
-  if (type === "exams-performance") {
+  if (type === "courses-assignment") {
     return (
       <div className="preview-box">
 
         <div className="preview-top">
           <div>
-            <small>Result Analysis</small>
-            <h4>Student Performance</h4>
+            <small>Academic Planning</small>
+            <h4>Teacher Assignments</h4>
           </div>
 
-          <FiBarChart2 className="preview-main-icon" />
+          <FiUsers className="preview-main-icon" />
         </div>
 
-        <div className="performance-card">
-          <div>
-            <span>Class Average</span>
-            <strong>84.6%</strong>
+        <div className="assignment-row">
+
+          <div className="assignment-icon">
+            <FiBookOpen />
           </div>
 
-          <div className="performance-bar">
-            <span style={{ width: "84%" }}></span>
+          <div>
+            <strong>Mathematics</strong>
+            <span>Class 10-A · Mr. Kumar</span>
           </div>
+
+          <FiCheck className="assignment-check" />
+
         </div>
 
-        <div className="performance-list">
+        <div className="assignment-row">
 
-          <div>
-            <span>A Grade</span>
-            <b>18 Students</b>
+          <div className="assignment-icon">
+            <FiBookOpen />
           </div>
 
           <div>
-            <span>B Grade</span>
-            <b>16 Students</b>
+            <strong>Science</strong>
+            <span>Class 10-A · Ms. Meena</span>
+          </div>
+
+          <FiCheck className="assignment-check" />
+
+        </div>
+
+        <div className="assignment-row">
+
+          <div className="assignment-icon">
+            <FiBookOpen />
           </div>
 
           <div>
-            <span>C Grade</span>
-            <b>8 Students</b>
+            <strong>English</strong>
+            <span>Class 10-B · Mrs. Anita</span>
           </div>
+
+          <FiCheck className="assignment-check" />
 
         </div>
 
@@ -1160,63 +989,116 @@ function FeaturePreview({ type }) {
   }
 
 
-  /* COMMUNICATION */
+  /* CALENDAR */
 
-  if (type === "communication") {
+  if (type === "calendar") {
     return (
       <div className="preview-box">
 
         <div className="preview-top">
           <div>
-            <small>School Communication</small>
-            <h4>Announcements</h4>
+            <small>School Calendar</small>
+            <h4>September 2026</h4>
           </div>
 
-          <FiBell className="preview-main-icon" />
+          <FiCalendar className="preview-main-icon" />
+        </div>
+
+        <div className="calendar-mini">
+
+          <div className="calendar-head">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+          </div>
+
+          <div className="calendar-days">
+            <span>1</span>
+            <span>2</span>
+            <span className="calendar-active">3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>8</span>
+            <span>9</span>
+            <span>10</span>
+            <span className="calendar-event">11</span>
+            <span>12</span>
+          </div>
+
+        </div>
+
+        <div className="calendar-event-row">
+          <FiCalendar />
+          <div>
+            <strong>Parent Meeting</strong>
+            <span>Saturday · 10:00 AM</span>
+          </div>
+        </div>
+
+      </div>
+    );
+  }
+
+
+  /* CALENDAR EVENTS */
+
+  if (type === "calendar-events") {
+    return (
+      <div className="preview-box">
+
+        <div className="preview-top">
+          <div>
+            <small>Upcoming Events</small>
+            <h4>School Activities</h4>
+          </div>
+
+          <FiCalendar className="preview-main-icon" />
         </div>
 
         <div className="announcement-card">
 
           <div className="announcement-icon">
-            <FiBell />
+            <FiCalendar />
+          </div>
+
+          <div>
+            <strong>Annual Sports Day</strong>
+            <span>September 18 · School Ground</span>
+          </div>
+
+          <small>18 Sep</small>
+
+        </div>
+
+        <div className="announcement-card">
+
+          <div className="announcement-icon">
+            <FiBookOpen />
+          </div>
+
+          <div>
+            <strong>Quarterly Exams</strong>
+            <span>September 22 · Main Block</span>
+          </div>
+
+          <small>22 Sep</small>
+
+        </div>
+
+        <div className="announcement-card">
+
+          <div className="announcement-icon">
+            <FiUsers />
           </div>
 
           <div>
             <strong>Parent Meeting</strong>
-            <span>Meeting scheduled for Saturday</span>
+            <span>September 27 · Auditorium</span>
           </div>
 
-          <small>Today</small>
-
-        </div>
-
-        <div className="announcement-card">
-
-          <div className="announcement-icon">
-            <FiMessageSquare />
-          </div>
-
-          <div>
-            <strong>School Notice</strong>
-            <span>Holiday announcement</span>
-          </div>
-
-          <small>Yesterday</small>
-
-        </div>
-
-        <div className="announcement-card">
-
-          <div className="announcement-icon">
-            <FiBell />
-          </div>
-
-          <div>
-            <strong>Staff Update</strong>
-            <span>New timetable published</span>
-          </div>
-
-          <small>2 days</small>
+          <small>27 Sep</small>
 
         </div>
 
@@ -1225,64 +1107,112 @@ function FeaturePreview({ type }) {
   }
 
 
-  /* COMMUNICATION CONNECT */
+  /* ACCOUNTS */
 
-  if (type === "communication-connect") {
+  if (type === "accounts") {
     return (
       <div className="preview-box">
 
         <div className="preview-top">
           <div>
-            <small>Communication</small>
-            <h4>Message Center</h4>
+            <small>School Finance</small>
+            <h4>Financial Overview</h4>
           </div>
 
-          <FiMessageSquare className="preview-main-icon" />
+          <FiDollarSign className="preview-main-icon" />
         </div>
 
-        <div className="message-item">
-          <div className="message-avatar">
-            P
-          </div>
-
-          <div>
-            <strong>Parents Group</strong>
-            <span>45 recipients</span>
-          </div>
-
-          <FiArrowRight />
+        <div className="money-card">
+          <small>Total Fee Collected</small>
+          <strong>₹1,84,500</strong>
+          <span>+12.5% this month</span>
         </div>
 
-        <div className="message-item">
-          <div className="message-avatar">
-            S
+        <div className="preview-table">
+
+          <div className="preview-row">
+            <span>Fee Collection</span>
+            <b className="status-paid">₹1.84L</b>
           </div>
 
-          <div>
-            <strong>School Staff</strong>
-            <span>120 recipients</span>
+          <div className="preview-row">
+            <span>Expenses</span>
+            <b>₹86K</b>
           </div>
 
-          <FiArrowRight />
-        </div>
-
-        <div className="message-item">
-          <div className="message-avatar">
-            A
+          <div className="preview-row">
+            <span>Pending Fees</span>
+            <b className="status-pending">₹32K</b>
           </div>
 
-          <div>
-            <strong>All Students</strong>
-            <span>1,250 recipients</span>
-          </div>
-
-          <FiArrowRight />
         </div>
 
       </div>
     );
   }
 
+
+  /* INVENTORY */
+
+  if (type === "inventory") {
+    return (
+      <div className="preview-box">
+
+        <div className="preview-top">
+          <div>
+            <small>Inventory Management</small>
+            <h4>Stock Overview</h4>
+          </div>
+
+          <FiPackage className="preview-main-icon" />
+        </div>
+
+        <div className="record-grid">
+
+          <div>
+            <small>Total Items</small>
+            <strong>248</strong>
+          </div>
+
+          <div>
+            <small>In Stock</small>
+            <strong>216</strong>
+          </div>
+
+          <div>
+            <small>Low Stock</small>
+            <strong>32</strong>
+          </div>
+
+        </div>
+
+        <div className="preview-table">
+
+          <div className="preview-table-title">
+            <span>Inventory Items</span>
+            <small>View all</small>
+          </div>
+
+          <div className="preview-row">
+            <span>Notebooks</span>
+            <b className="status-paid">120</b>
+          </div>
+
+          <div className="preview-row">
+            <span>Chairs</span>
+            <b className="status-paid">64</b>
+          </div>
+
+          <div className="preview-row">
+            <span>Whiteboards</span>
+            <b className="status-pending">8 Low</b>
+          </div>
+
+        </div>
+
+      </div>
+    );
+  }
 
   return null;
 }
@@ -1316,6 +1246,8 @@ export default function SchoolFeaturesDetails() {
 
   return (
     <main className="school-feature-details">
+
+      {/* HERO */}
 
       <section className="feature-detail-hero">
 
@@ -1362,6 +1294,9 @@ export default function SchoolFeaturesDetails() {
               </button>
 
             </div>
+
+
+            {/* HERO UI */}
 
             <div className="feature-detail-visual">
 
@@ -1438,6 +1373,9 @@ export default function SchoolFeaturesDetails() {
 
       </section>
 
+
+      {/* KEY FEATURES */}
+
       <section className="feature-key-section">
 
         <div className="feature-key-container">
@@ -1462,13 +1400,11 @@ export default function SchoolFeaturesDetails() {
                 className="feature-point-card"
                 key={point}
               >
-
                 <FiCheckCircle />
 
                 <span>
                   {point}
                 </span>
-
               </div>
 
             ))}
@@ -1478,6 +1414,9 @@ export default function SchoolFeaturesDetails() {
         </div>
 
       </section>
+
+
+      {/* INFORMATION */}
 
       <section className="feature-info-section">
 
@@ -1525,6 +1464,9 @@ export default function SchoolFeaturesDetails() {
         </div>
 
       </section>
+
+
+      {/* CTA */}
 
       <section className="feature-detail-cta">
 

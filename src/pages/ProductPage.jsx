@@ -4,6 +4,7 @@ import hospital from "../assets/hospital.jpeg";
 
 export default function ProductPage() {
   const navigate = useNavigate();
+
   const webProducts = [
     {
       id: 1,
@@ -18,7 +19,7 @@ export default function ProductPage() {
       name: "Hospital System",
       description:
         "A comprehensive hospital management system designed to streamline operations and improve patient care.",
-      image: "hospital",
+      image: hospital,
       link: "https://hospital-delta-pink.vercel.app/",
     },
     {
@@ -38,7 +39,7 @@ export default function ProductPage() {
       description:
         "A smart mobile application designed to simplify business and store management.",
       image: "picture",
-      link: "/mobile-app-development/kadai",
+      link: "/kadai",
     },
     {
       id: 2,
@@ -62,7 +63,7 @@ export default function ProductPage() {
       description:
         "Track attendance, stock & daily business operations.",
       image: "picture",
-      link: "/mobile-app-development/customer",
+      link: "/attendance-inventory",
     },
   ];
 
@@ -107,12 +108,15 @@ export default function ProductPage() {
               <article
                 className="product-card"
                 key={product.id}
-                style={{
-                  backgroundImage: `url(${product.image})`,
-                }}
               >
 
-                <div className="product-card-overlay"></div>
+                <div className="product-card-image">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                  />
+                </div>
+
                 <div className="product-card-content">
 
                   <h3>{product.name}</h3>
@@ -121,9 +125,7 @@ export default function ProductPage() {
 
                   <button
                     className="view-product-btn"
-                    onClick={() => {
-                      window.location.href = product.link;
-                    }}
+                    onClick={() => {window.location.href = product.link}}
                   >
                     View Product
                     <span>→</span>
@@ -137,6 +139,7 @@ export default function ProductPage() {
           </div>
 
         </section>
+
 
         <section className="product-category-card">
 
@@ -157,21 +160,29 @@ export default function ProductPage() {
 
           </div>
 
+
+          {/* PRODUCTS SCROLL */}
+
           <div className="products-scroll">
 
             {appProducts.map((product) => (
               <article
                 className="product-card"
                 key={product.id}
-                style={{
-                  backgroundImage: `url(${product.image})`,
-                }}
               >
 
-                {/* DARK OVERLAY */}
-                <div className="product-card-overlay"></div>
+                {/* PRODUCT IMAGE */}
 
-                {/* CONTENT ON IMAGE */}
+                <div className="product-card-image">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                  />
+                </div>
+
+
+                {/* PRODUCT CONTENT */}
+
                 <div className="product-card-content">
 
                   <h3>{product.name}</h3>
@@ -180,9 +191,7 @@ export default function ProductPage() {
 
                   <button
                     className="view-product-btn"
-                    onClick={() => {
-                      window.location.href = product.link;
-                    }}
+                    onClick={() => navigate(product.link)}
                   >
                     View Product
                     <span>→</span>

@@ -1,0 +1,344 @@
+.attendance-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  overflow-x: hidden;
+}
+
+.attendance-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 760px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+.attendance-background {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
+
+.attendance-background-media {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+.attendance-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 18, 30, 0.88) 0%,
+      rgba(10, 18, 30, 0.65) 38%,
+      rgba(10, 18, 30, 0.22) 75%,
+      rgba(10, 18, 30, 0.12) 100%
+    );
+}
+
+.attendance-hero-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    1200px,
+    calc(100% - 80px)
+  );
+
+  margin: 0 auto;
+}
+
+.attendance-hero-content {
+  max-width: 650px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.attendance-eyebrow {
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.attendance-hero-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    50px,
+    6vw,
+    78px
+  );
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+}
+
+.attendance-hero-content h1 span {
+  display: block;
+
+  color: #34d399;
+}
+
+.attendance-hero-content p {
+  max-width: 570px;
+
+  margin: 28px 0 34px;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.82
+  );
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+.attendance-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 23px;
+  border: none;
+  width: 250px;
+  height: 50px;
+  border-radius: 9px;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.attendance-primary-btn span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.attendance-primary-btn:hover {
+  background: #34d399;
+  transform: translateY(-2px);
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 50px;
+  padding: 15px 23px;
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 250px;
+  transition: all 0.25s ease;
+}
+
+.primary-btn span {
+  font-size: 18px;
+
+  line-height: 1;
+}
+
+.primary-btn:hover {
+  background: #34d399;
+  border: none;
+  transform: translateY(-2px);
+}
+
+.attendance-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.attendance-slide-indicators {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 50%;
+
+  bottom: 32px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.attendance-slide-indicators span {
+  width: 28px;
+
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.45
+  );
+
+  transition: all 0.3s ease;
+}
+
+.attendance-slide-indicators span.active {
+  width: 45px;
+
+  background: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .attendance-hero {
+    min-height: 700px;
+  }
+
+  .attendance-hero-container {
+    width: calc(100% - 60px);
+  }
+
+  .attendance-hero-content {
+    max-width: 600px;
+  }
+
+  .attendance-hero-content h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .attendance-hero {
+    min-height: 680px;
+  }
+
+  .attendance-hero-container {
+    width: calc(100% - 40px);
+  }
+
+  .attendance-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(10, 18, 30, 0.88),
+        rgba(10, 18, 30, 0.55)
+      );
+  }
+
+  .attendance-hero-content {
+    max-width: 560px;
+  }
+
+  .attendance-hero-content h1 {
+    font-size: 52px;
+
+    letter-spacing: -2px;
+  }
+
+  .attendance-hero-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .attendance-hero {
+    min-height: 650px;
+  }
+
+  .attendance-hero-container {
+    width: calc(100% - 28px);
+  }
+
+  .attendance-hero-content {
+    max-width: 100%;
+  }
+
+  .attendance-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+  }
+
+  .attendance-hero-content h1 {
+    font-size: 40px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .attendance-hero-content p {
+    margin: 22px 0 27px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .attendance-primary-btn {
+    padding: 13px 18px;
+
+    font-size: 13px;
+  }
+
+  .attendance-slide-indicators {
+    bottom: 25px;
+  }
+
+  .attendance-slide-indicators span {
+    width: 22px;
+  }
+
+  .attendance-slide-indicators span.active {
+    width: 35px;
+  }
+}
