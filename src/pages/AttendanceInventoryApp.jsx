@@ -4,6 +4,7 @@ import "./AttendanceInventoryApp.css";
 import images from "../assets/images.jpeg";
 import image2 from "../assets/image2.png";
 import video3 from "../assets/video3.mp4";
+import { BiLogoPlayStore } from "react-icons/bi";
 
 
 const slides = [
@@ -140,7 +141,7 @@ export default function AttendanceInventoryApp() {
             <button
               className="primary-btn"
             >
-              Download From Playstore
+              Download From <BiLogoPlayStore className="playstore-icon" />
             </button>
 
             </div>

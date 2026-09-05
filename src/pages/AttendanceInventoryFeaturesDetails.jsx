@@ -13,6 +13,7 @@ import {
   FiShield,
   FiGrid,
 } from "react-icons/fi";
+import image2 from "../assets/image2.png";
 import "./AttendanceInventoryFeaturesDetails.css";
 
 const featureData = {
@@ -20,6 +21,7 @@ const featureData = {
     icon: FiGrid,
     eyebrow: "DASHBOARD",
     title: "Everything at a glance.",
+    image: image2,
     description:
       "Get a complete overview of attendance, employees, inventory and stock from one simple and powerful dashboard.",
     points: [
@@ -223,6 +225,12 @@ export default function AttendanceInventoryFeatureDetails() {
                 {feature.description}
               </p>
 
+            </div>
+
+            <div className="attendance-detail-preview">
+                <img src={feature.image} alt="image"/>
+            </div>
+          
               <button
                 className="attendance-detail-primary-btn"
                 onClick={() =>
@@ -232,101 +240,6 @@ export default function AttendanceInventoryFeatureDetails() {
                 Explore All Features
                 <FiArrowRight />
               </button>
-
-            </div>
-
-            <div className="attendance-detail-preview">
-
-              <div className="preview-header">
-
-                <div className="preview-logo">
-                  <Icon />
-                  <span>A&I App</span>
-                </div>
-
-                <div className="preview-user"></div>
-
-              </div>
-
-              <div className="preview-body">
-
-                <div className="preview-sidebar">
-
-                  <div className="preview-sidebar-item active">
-                    <FiGrid />
-                    Dashboard
-                  </div>
-
-                  <div className="preview-sidebar-item">
-                    <FiCalendar />
-                    Attendance
-                  </div>
-
-                  <div className="preview-sidebar-item">
-                    <FiUsers />
-                    Employees
-                  </div>
-
-                  <div className="preview-sidebar-item">
-                    <FiBox />
-                    Inventory
-                  </div>
-
-                  <div className="preview-sidebar-item">
-                    <FiBarChart2 />
-                    Reports
-                  </div>
-
-                </div>
-
-                <div className="preview-main">
-
-                  <h3>{feature.eyebrow}</h3>
-
-                  <div className="preview-cards">
-
-                    <div className="preview-card">
-                      <span>Today</span>
-                      <strong>96</strong>
-                      <small>Present</small>
-                    </div>
-
-                    <div className="preview-card">
-                      <span>Total Items</span>
-                      <strong>342</strong>
-                      <small>Inventory</small>
-                    </div>
-
-                    <div className="preview-card">
-                      <span>Low Stock</span>
-                      <strong>24</strong>
-                      <small>Items</small>
-                    </div>
-
-                  </div>
-
-                  <div className="preview-chart">
-
-                    <div className="chart-title">
-                      Overview
-                    </div>
-
-                    <div className="chart-bars">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
 
           </div>
 

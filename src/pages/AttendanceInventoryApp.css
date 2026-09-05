@@ -160,8 +160,14 @@
   transform: translateY(-2px);
 }
 
+.playstore-icon{
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-left: 5px;
+
+}
 .primary-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;

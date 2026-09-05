@@ -9,8 +9,14 @@ import {
   FiBell,
   FiArrowLeft,
   FiArrowRight,
+  FiPlay,
+  FiCheck,
+  FiStar,
+  FiTrendingUp,
 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import kadai from "../assets/kadai.jpeg";
+import kadai2 from "../assets/kadai2.jpeg";
 import "./KadaiFeatures.css";
 
 const features = [
@@ -89,31 +95,51 @@ export default function KadaiFeatures() {
       <section className="kadai-features-hero">
         <div className="kadai-features-container">
 
-          <button
-            className="kadai-back-btn"
-            onClick={() => navigate("/kadai")}
-          >
+          <button className="kadai-back-btn" onClick={() => navigate("/kadai")}>
             <FiArrowLeft />
             Back to Kadai App
           </button>
 
-          <div className="kadai-features-hero-content">
+          <div className="kadai-features-hero-layout">
+            <div className="kadai-features-hero-content">
+              <span className="kadai-features-eyebrow">KADAI APP FEATURES</span>
 
-            <span className="kadai-features-eyebrow">
-              KADAI APP FEATURES
-            </span>
+              <h1>
+                Every Feature
+                <span>Built Around You.</span>
+              </h1>
 
-            <h1>
-              Everything You Need
-              <span>To Run Your Shop.</span>
-            </h1>
+              <p>
+                Discover shops, manage products, follow every order and make
+                everyday shopping feel wonderfully simple with Kadai.
+              </p>
 
-            <p>
-              From nearby shops and global sellers to inventory,
-              orders and tracking, Kadai App brings your complete
-              shop experience together in one place.
-            </p>
+              <div className="kadai-hero-actions">
+                <button
+                  className="kadai-hero-primary"
+                  onClick={() => document.querySelector(".kadai-features-section")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Explore All Features <FiArrowRight />
+                </button>
+              </div>
 
+              <div className="kadai-trust-row">
+                <div><strong>10K+</strong><span>Active Shops</span></div>
+                <div><strong>50K+</strong><span>Happy Users</span></div>
+                <div><strong>1M+</strong><span>Orders</span></div>
+              </div>
+            </div>
+
+            <div className="kadai-hero-visual">
+              <div className="kadai-hero-dots"></div>
+              <div className="kadai-hero-orbit kadai-hero-orbit-one"><FiMapPin /></div>
+              <div className="kadai-hero-orbit kadai-hero-orbit-two"><FiShoppingCart /></div>
+              <div className="kadai-hero-photo-frame">
+                <img src={kadai} alt="A welcoming Kadai local shop" />
+                <div className="kadai-store-sign">KADAI <small>shop, made simple</small></div>
+              </div>
+              <div className="kadai-hero-note"><FiPackage /><span>Everything in one place</span></div>
+            </div>
           </div>
 
         </div>
@@ -125,18 +151,17 @@ export default function KadaiFeatures() {
 
           <div className="kadai-features-heading">
             <div>
-              <span>EXPLORE</span>
-              <h2>Kadai App Features</h2>
-            
-
-            <p>
-              Powerful tools designed to make shopping,
-              selling and managing products simple.
-            </p>
+              <span>THE KADAI JOURNEY</span>
+              <h2>Everything You Can Do <em>With Kadai.</em></h2>
             </div>
+            <p>
+              Powerful tools, a simple interface and complete control for
+              shop owners and customers.
+            </p>
           </div>
 
           <div className="kadai-features-grid">
+            <div className="kadai-journey-line"></div>
 
             {features.map((feature, index) => {
               const Icon = feature.icon;
@@ -184,33 +209,55 @@ export default function KadaiFeatures() {
         </div>
       </section>
 
+      <section className="kadai-story-section">
+        <div className="kadai-features-container kadai-story-layout">
+          <div className="kadai-story-copy">
+            <span className="kadai-section-kicker">WHY KADAI</span>
+            <h2>More Than<br /><em>Just Shopping.</em></h2>
+            <p>
+              Kadai brings the warmth of a neighbourhood shop together with
+              the reach and confidence of a modern marketplace.
+            </p>
+            <div className="kadai-story-stats">
+              <div><strong>10K+</strong><span>Happy Users</span></div>
+              <div><strong>500+</strong><span>Active Shops</span></div>
+              <div><strong>4.8</strong><span>Average Rating <FiStar /></span></div>
+              <div><strong>1M+</strong><span>Orders</span></div>
+            </div>
+          </div>
+          <div className="kadai-story-visual">
+            <img src={kadai2} alt="A colourful local market powered by Kadai" />
+            <div className="kadai-story-badge">Local <span>•</span> Global <span>•</span> Together</div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="kadai-features-cta">
         <div className="kadai-features-container">
-
-          <div className="kadai-cta-content">
-
-            <span>KADAI APP</span>
-
-            <h2>
-              A Smarter Way
-              <br />
-              To Manage Your Shop.
-            </h2>
-
-            <p>
-              Explore every feature and discover how Kadai App
-              can simplify your shop management experience.
-            </p>
-
-            <button
-              onClick={() => navigate("/kadai")}
-              className="kadai-cta-button"
-            >
-              Back to Kadai App
-              <FiArrowRight />
-            </button>
-
+          <div className="kadai-cta-layout">
+            <div className="kadai-cta-content">
+              <span>KADAI APP</span>
+              <h2>Your Shop,<br /><em>Limitless Growth.</em></h2>
+              <p>
+                Explore every feature and see how Kadai App helps you manage,
+                grow and succeed.
+              </p>
+              <button onClick={() => navigate("/kadai")} className="kadai-cta-button">
+                Back to Kadai App <FiArrowRight />
+              </button>
+              <div className="kadai-benefits">
+                <span><FiCheck /> Secure &amp; Reliable</span>
+                <span><FiCheck /> Fast &amp; Smooth</span>
+                <span><FiCheck /> 24/7 Support</span>
+                <span><FiCheck /> Business Growth</span>
+              </div>
+            </div>
+            <div className="kadai-cta-visual">
+              <div className="kadai-cta-glow"></div>
+              <img src={kadai} alt="Kadai shop storefront" />
+              <div className="kadai-analytics-chip"><FiTrendingUp /><strong>+24.8%</strong><small>shop growth</small></div>
+            </div>
           </div>
 
         </div>

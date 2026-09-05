@@ -8,8 +8,11 @@ import {
   FiBell,
   FiShield,
   FiGrid,
-  FiArrowRight,
+  FiArrowUpRight,
+  FiCheckCircle,
 } from "react-icons/fi";
+import image from "../assets/image2.png"
+
 import "./AttendanceInventoryFeatures.css";
 
 const features = [
@@ -18,182 +21,285 @@ const features = [
     icon: FiGrid,
     title: "Dashboard",
     description:
-      "Get a clear overview of attendance, employees, inventory and stock from one powerful dashboard.",
+      "Get a real-time overview of attendance, employees, inventory, stock and important updates.",
+    color: "green",
   },
   {
     id: "attendance",
     icon: FiCalendar,
     title: "Attendance Management",
     description:
-      "Track employee attendance, check-in, check-out and daily attendance records easily.",
+      "Track check-in, check-out and daily attendance records with accuracy and ease.",
+    color: "blue",
   },
   {
     id: "employees",
     icon: FiUsers,
     title: "Employee Management",
     description:
-      "Manage employee information, records and work details in one organized place.",
+      "Manage employee profiles, work details and records in one organized place.",
+    color: "purple",
   },
   {
     id: "inventory",
     icon: FiBox,
     title: "Inventory Management",
     description:
-      "Manage products, items and inventory information with real-time stock visibility.",
+      "Add, update and manage all your products and items effortlessly.",
+    color: "orange",
   },
   {
     id: "stock",
     icon: FiLayers,
     title: "Stock Management",
     description:
-      "Track stock movements, low-stock items, incoming stock and outgoing stock efficiently.",
+      "Monitor stock movements, low-stock items, incoming and outgoing stock.",
+    color: "teal",
   },
   {
     id: "reports",
     icon: FiBarChart2,
     title: "Reports & Analytics",
     description:
-      "Generate useful attendance and inventory reports to understand your business better.",
+      "Generate insightful reports and analyze data to make smarter decisions.",
+    color: "pink",
   },
   {
     id: "notifications",
     icon: FiBell,
     title: "Notifications",
     description:
-      "Stay updated with attendance alerts, stock updates and important system notifications.",
+      "Stay informed with attendance alerts, stock updates and important notifications.",
+    color: "yellow",
   },
   {
     id: "access",
     icon: FiShield,
     title: "User & Access Management",
     description:
-      "Control user access and keep important attendance and inventory data secure.",
+      "Manage user roles and permissions to keep your important data secure.",
+    color: "green",
   },
 ];
 
 export default function AttendanceInventoryFeatures() {
   const navigate = useNavigate();
 
+  const openFeature = (id) => {
+    navigate(`/attendance-inventory/features/${id}`);
+  };
+
+  const scrollToFeatures = () => {
+    const element = document.querySelector(".ai-features-section");
+
+    element?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <main className="attendance-features-page">
+    <main className="ai-page">
 
-      <section className="attendance-features-hero">
-        <div className="attendance-features-hero-container">
+      <section className="ai-hero">
 
-          <span className="attendance-features-eyebrow">
-            ATTENDANCE & INVENTORY APP
-          </span>
+        <div className="ai-hero-bg-circle"></div>
+        <div className="ai-hero-dots"></div>
 
-          <h1>
-            Everything you need to
-            <span>manage with ease.</span>
-          </h1>
+        <div className="ai-hero-container">
 
-          <p>
-            Powerful attendance and inventory features designed
-            to simplify daily operations, improve accuracy and
-            give you complete control.
-          </p>
+          {/* LEFT CONTENT */}
+          <div className="ai-hero-content">
 
-        </div>
-      </section>
+            <div className="ai-app-label">
+              <span></span>
+              ATTENDANCE & INVENTORY APP
+            </div>
 
-      <section className="attendance-features-section">
+            <h1>
+              Manage better.
+              <strong>Work smarter.</strong>
+            </h1>
 
-        <div className="attendance-features-container">
-
-          <div className="attendance-features-heading">
-            <div>
-              <span>POWERFUL FEATURES</span>
-
-              <h2>
-                One app.
-                <br />
-                Complete control.
-              </h2>
-            
+            <div className="ai-heading-line">
+              <span></span>
+              <i></i>
+            </div>
 
             <p>
-              Manage your employees, attendance, inventory and
-              stock from a single, simple and reliable platform.
+              A complete solution to manage attendance, employees,
+              inventory, stock and reports — all in one powerful
+              platform. Simplify your daily operations and work
+              with confidence.
             </p>
+
+            <div className="ai-hero-buttons">
+
+              <button className="ai-play-btn" onClick={scrollToFeatures}>
+                 Explore All Features
+              </button>
             </div>
           </div>
 
-          <div className="attendance-features-grid">
 
-            {features.map((feature) => {
-              const Icon = feature.icon;
+          {/* RIGHT SIDE IMAGE */}
+          <div className="ai-dashboard-image-area">
 
-              return (
-                <article
-                  className="attendance-feature-card"
-                  key={feature.id}
-                  onClick={() =>
-                    navigate(
-                      `/attendance-inventory/features/${feature.id}`
-                    )
-                  }
-                >
+            <div className="ai-dashboard-image-card">
 
-                  <div className="attendance-feature-icon">
+              <img
+                src= {image}
+                alt="Attendance and Inventory Dashboard"
+              />
+
+            </div>
+
+            <div className="ai-image-decoration decoration-one"></div>
+
+            <div className="ai-image-decoration decoration-two"></div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section className="ai-features-section">
+
+        <div className="ai-section-heading">
+
+          <span>POWERFUL FEATURES</span>
+
+          <h2>
+            Everything you need in one place
+          </h2>
+
+          <p>
+            From daily attendance to inventory tracking,
+            our features are designed to save time and
+            bring accuracy to your work.
+          </p>
+
+          <div className="ai-heading-line center">
+            <span></span>
+            <i></i>
+          </div>
+
+        </div>
+
+
+        <div className="ai-feature-grid">
+
+          {features.map((feature, index) => {
+
+            const Icon = feature.icon;
+
+            return (
+              <article
+                key={feature.id}
+                className={`ai-feature-card ${feature.color}`}
+                onClick={() => openFeature(feature.id)}
+              >
+
+                <div className="ai-card-top">
+
+                  <div className="ai-feature-icon">
                     <Icon />
                   </div>
 
-                  <div className="attendance-feature-card-content">
+                  <span className="ai-feature-number">
+                    0{index + 1}
+                  </span>
 
-                    <h3>{feature.title}</h3>
+                </div>
 
-                    <p>{feature.description}</p>
 
-                    <button
-                      className="attendance-feature-link"
-                      onClick={(e) => {
-                        e.stopPropagation();
+                <div className="ai-card-content">
 
-                        navigate(
-                          `/attendance-inventory/features/${feature.id}`
-                        );
-                      }}
-                    >
-                      Explore Feature
-                      <FiArrowRight />
-                    </button>
+                  <h3>
+                    {feature.title}
+                  </h3>
 
-                  </div>
+                  <p>
+                    {feature.description}
+                  </p>
 
-                </article>
-              );
-            })}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openFeature(feature.id);
+                    }}
+                  >
+                    Explore Feature
+                    <FiArrowUpRight />
+                  </button>
 
-          </div>
+                </div>
+
+              </article>
+            );
+          })}
 
         </div>
 
       </section>
 
-      <section className="attendance-features-cta">
+      <section className="ai-cta">
 
-        <div className="attendance-features-cta-container">
+        <div className="ai-cta-circle circle-one"></div>
+        <div className="ai-cta-circle circle-two"></div>
 
-          <div>
-            <span>READY TO GET STARTED?</span>
+        <div className="ai-cta-container">
+
+          <div className="ai-cta-content">
+
+            <span className="ai-cta-label">
+              SIMPLE • SMART • POWERFUL
+            </span>
 
             <h2>
               Simplify attendance.
               <br />
               Manage inventory better.
             </h2>
+
+            <p>
+              Bring your daily operations together
+              with one easy-to-use platform.
+            </p>
+
+            <button
+              className="ai-cta-btn"
+              onClick={scrollToFeatures}
+            >
+              Explore Features
+              <FiArrowUpRight />
+            </button>
+
           </div>
 
-          <button
-            onClick={() =>
-              navigate("/attendance-inventory")
-            }
-          >
-            Back to App
-            <FiArrowRight />
-          </button>
+
+          <div className="ai-cta-checklist">
+
+            <div>
+              <FiCheckCircle />
+              <span>Easy attendance tracking</span>
+            </div>
+
+            <div>
+              <FiCheckCircle />
+              <span>Smart inventory management</span>
+            </div>
+
+            <div>
+              <FiCheckCircle />
+              <span>Real-time reports</span>
+            </div>
+
+            <div>
+              <FiCheckCircle />
+              <span>Secure user access</span>
+            </div>
+
+          </div>
 
         </div>
 

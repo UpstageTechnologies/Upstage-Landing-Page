@@ -189,25 +189,26 @@
     rgba(16, 185, 129, 0.30);
 }
 
-.school-secondary-btn {
-  padding: 13px 22px;
+.playstore-icon{
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-left: 5px;
 
+}
+.school-secondary-btn {
+  display: flex;
+  padding: 13px 22px;
+  text-align: center;
+  justify-content: center;
   border: 1px solid
     rgba(255, 255, 255, 0.45);
-
   border-radius: 10px;
-
   background: rgba(255, 255, 255, 0.10);
-
   backdrop-filter: blur(8px);
-
   color: #ffffff;
-
   font-size: 15px;
   font-weight: 600;
-
   cursor: pointer;
-
   transition:
     background 0.25s ease,
     border-color 0.25s ease;
@@ -329,7 +330,6 @@
 
   .school-hero-container {
     width: 88%;
-
     margin: 0 auto;
   }
 
@@ -341,7 +341,6 @@
 
   .school-eyebrow {
     font-size: 11px;
-
     letter-spacing: 1.5px;
 
     margin-bottom: 18px;

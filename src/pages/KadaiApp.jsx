@@ -4,6 +4,7 @@ import "./KadaiApp.css";
 import kadai from "../assets/kadai.jpeg";
 import kadai2 from "../assets/kadai2.jpeg";
 import video from "../assets/video.mp4";
+import { BiLogoPlayStore } from "react-icons/bi";
 
 const slides = [
   {
@@ -116,9 +117,9 @@ export default function KadaiApp() {
             </button>
 
             <button
-              className="kadai-primary-btn"
+              className="kadai-secondary-btn"
             >
-              Download From Playstore
+              Download From <BiLogoPlayStore className="playstore-icon"/>
             </button>
 
             </div>

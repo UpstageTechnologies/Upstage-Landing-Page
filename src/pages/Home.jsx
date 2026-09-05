@@ -30,7 +30,9 @@ export default function Home() {
               We create modern websites, mobile applications, and customized digital solutions that help businesses grow in the digital world.
             </p>
             <div className="hero-buttons">
-              <Button variant="primary" onClick={()=> window.open("https://www.upstagetechnologies.in")}>Our Products <FaArrowRight /></Button>
+              <Link to="/products">
+              <Button variant="primary">Our Products <FaArrowRight /></Button>
+              </Link>
               <Link to="/services">
               <Button variant="secondary" >Explore Services</Button>
               </Link>

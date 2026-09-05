@@ -156,14 +156,13 @@
 }
 
 .attendance-detail-preview {
-  width: 100%;
-
+  width: 550px;
+  height: 350px;
   overflow: hidden;
 
   border: 1px solid #dbe5df;
 
   border-radius: 20px;
-
   background: #ffffff;
 
   box-shadow:
@@ -467,7 +466,12 @@
 .attendance-detail-cta {
   padding: 85px 0;
 
-  background: #172033;
+  background:
+    linear-gradient(
+      135deg,
+      #064e3b,
+      #047857
+    );
 }
 
 .attendance-detail-cta-container {
@@ -605,6 +609,10 @@
     gap: 50px;
   }
 
+  .attendance-detail-content{
+    order: 1;
+  }
+
   .attendance-detail-content h1 {
     font-size: 52px;
   }
@@ -614,7 +622,13 @@
   }
 
   .attendance-detail-preview {
-    max-width: 650px;
+    order: 2;
+    width: 360px;
+    height: 260px;
+  }
+
+  .attendance-detail-primary-btn{
+    order: 3;
   }
 
   .attendance-detail-overview {

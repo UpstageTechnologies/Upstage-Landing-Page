@@ -590,7 +590,7 @@ export default function KadaiFeaturesDetails() {
               <button
                 className="kadai-detail-primary"
                 onClick={() =>
-                  navigate("/kadai-app/features")
+                  navigate("/kadai/features")
                 }
               >
                 Explore Other Features

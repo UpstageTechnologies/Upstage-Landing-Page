@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import school1 from "../assets/school1.png";
 import school2 from "../assets/school2.jpeg";
 import video2 from "../assets/video2.mp4";
+import { BiLogoPlayStore } from "react-icons/bi";
 import "./SchoolManagementPage.css";
 
 const slides = [
@@ -147,7 +148,7 @@ export default function SchoolManagementPage() {
               <button
                 className="school-secondary-btn"
               >
-                Download From Playstore
+                Download From  <BiLogoPlayStore className="playstore-icon"/>
               </button>
 
             </div>
