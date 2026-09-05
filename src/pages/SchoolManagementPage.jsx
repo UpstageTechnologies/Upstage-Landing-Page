@@ -147,6 +147,7 @@ export default function SchoolManagementPage() {
 
               <button
                 className="school-secondary-btn"
+                onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.crateapp"}
               >
                 Download From  <BiLogoPlayStore className="playstore-icon"/>
               </button>

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import './POSPage.css'
-
+import { BiLogoPlayStore } from 'react-icons/bi'
 export default function POSPage() {
   const navigate = useNavigate()
 
@@ -14,9 +14,14 @@ export default function POSPage() {
             <p className="pos-subtitle">
               Upstage India provides modern POS solutions that help businesses manage sales, inventory, payments and business operations efficiently. Streamline your workflow and grow your business.
             </p>
+            <div className="pos-download-btn">
             <button className="pos-button pos-cta" onClick={() => navigate('/inventorypage')}>
               Explore POS Services
             </button>
+            <button className="pos-primary-button pos-cta" onClick={() => window.location.href="https://play.google.com/store/apps/details?id=com.myshopapp"}>
+              Download From <BiLogoPlayStore />
+            </button>
+            </div>
           </div>
           <div className="pos-visual">
             <div className="pos-mockup-hero">

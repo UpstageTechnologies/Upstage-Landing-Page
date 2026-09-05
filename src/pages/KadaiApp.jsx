@@ -118,6 +118,7 @@ export default function KadaiApp() {
 
             <button
               className="kadai-secondary-btn"
+              onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.upstage.kadai"}
             >
               Download From <BiLogoPlayStore className="playstore-icon"/>
             </button>

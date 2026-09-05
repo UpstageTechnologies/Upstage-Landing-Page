@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import "./ProductPage.css";
 import hospital from "../assets/hospital.jpeg";
+import hospital2 from "../assets/hospital.png";
+import school1 from "../assets/school1.jpeg"
+import school from "../assets/school.png";
+import kadai from "../assets/kadai.png"
 
 export default function ProductPage() {
   const navigate = useNavigate();
@@ -11,7 +15,7 @@ export default function ProductPage() {
       name: "Kadai Website",
       description:
         "A modern and responsive website designed to showcase your business and engage your customers.",
-      image: "picture",
+      image: kadai,
       link: "https://www.kadai.website/",
     },
     {
@@ -19,7 +23,7 @@ export default function ProductPage() {
       name: "Hospital System",
       description:
         "A comprehensive hospital management system designed to streamline operations and improve patient care.",
-      image: hospital,
+      image: hospital2,
       link: "https://hospital-delta-pink.vercel.app/",
     },
     {
@@ -27,7 +31,7 @@ export default function ProductPage() {
       name: "School System",
       description:
         "A comprehensive school management system designed to streamline operations and improve education outcomes.",
-      image: "picture",
+      image: school,
       link: "https://www.upstagetechnologies.in/intro",
     },
   ];
@@ -54,7 +58,7 @@ export default function ProductPage() {
       name: "Upstage school management",
       description:
         "Simplify school operations with smater digital management.",
-      image: "picture",
+      image: school1,
       link: "/school-management",
     },
     {

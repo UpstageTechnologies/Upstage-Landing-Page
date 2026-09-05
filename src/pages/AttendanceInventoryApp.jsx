@@ -140,6 +140,7 @@ export default function AttendanceInventoryApp() {
 
             <button
               className="primary-btn"
+              onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.thrinias.niruban.upstage"}
             >
               Download From <BiLogoPlayStore className="playstore-icon" />
             </button>
