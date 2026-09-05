@@ -4,7 +4,8 @@ import hospital from "../assets/hospital.jpeg";
 import hospital2 from "../assets/hospital.png";
 import school1 from "../assets/school1.jpeg"
 import school from "../assets/school.png";
-import kadai from "../assets/kadai.png"
+import kadai from "../assets/kadai3.png";
+import kadai1 from "../assets/kadai1.jpeg";
 
 export default function ProductPage() {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ export default function ProductPage() {
       name: "Kadai App",
       description:
         "A smart mobile application designed to simplify business and store management.",
-      image: "picture",
+      image: kadai1,
       link: "/kadai",
     },
     {
