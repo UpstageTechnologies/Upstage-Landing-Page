@@ -284,7 +284,7 @@ export default function Consultancy() {
         </p>
 
       <button
-        className="primary-btn"
+        className="hide-primary-btn"
         onClick={() => setShowAbapServices(!showAbapServices)}
       >
         <span>
