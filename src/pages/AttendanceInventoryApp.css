@@ -264,6 +264,7 @@
 
 @media (max-width: 768px) {
   .attendance-hero {
+    margin-bottom: 0;
     min-height: 680px;
   }
 
@@ -310,6 +311,9 @@
 }
 
 @media (max-width: 480px) {
+  .attendance-page{
+    margin-bottom: 0px;
+  }
   .attendance-hero {
     min-height: 650px;
   }
@@ -324,9 +328,7 @@
 
   .attendance-eyebrow {
     font-size: 9px;
-
     letter-spacing: 1.5px;
-
     margin-bottom: 15px;
   }
 
@@ -346,7 +348,7 @@
 
   .attendance-primary-btn {
     padding: 13px 18px;
-
+    width: 100%;
     font-size: 13px;
   }
 
