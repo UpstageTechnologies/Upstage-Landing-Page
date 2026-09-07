@@ -343,13 +343,12 @@ ul, ol {
 .footer {
   background-color: var(--dark-navy);
   color: white;
-  padding-top: 0px;
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 
 .footer-container {
   max-width: 1200px;
-  margin: 0 auto;
   padding: 0 2rem;
 }
 
